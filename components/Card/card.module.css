@@ -1,0 +1,35 @@
+.serviceCard {
+    @apply bg-white rounded-3xl p-6 flex flex-row gap-16 justify-center items-center;
+}
+
+.serviceContent {
+    @apply flex flex-col justify-start items-start gap-8;
+}
+
+.serviceBadge {
+    @apply flex justify-center items-center w-16 aspect-square rounded-2xl bg-primary-100;
+}
+
+.serviceIcon {
+    @apply w-6 h-6 fill-primary-300;
+}
+
+.serviceDetail {
+    @apply flex flex-col gap-2 justify-start items-start;
+}
+
+.serviceDetail > h6 {
+    @apply font-bold text-primary-700 text-[26px];
+}
+
+.serviceDetail > p {
+    @apply font-normal text-primary-700 text-base;
+}
+
+.serviceIconWrap {
+    @apply flex justify-center items-center;
+}
+
+.serviceIcon {
+    @apply fill-primary-700 w-6 h-6;
+}

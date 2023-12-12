@@ -1,0 +1,11 @@
+.list {
+    @apply flex flex-row justify-center items-center gap-2;
+}
+
+.list > p {
+    @apply text-base font-bold text-primary-700;
+}
+
+.listIcon {
+    @apply h-6 w-6 fill-primary-600
+}

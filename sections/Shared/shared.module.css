@@ -1,0 +1,79 @@
+.container {
+    @apply flex justify-center items-center;
+    @apply xl:p-16 xl:gap-[56px];
+    background: linear-gradient(180deg, rgba(248, 250, 252, 0.00) 0%, rgba(248, 250, 252, 0.95) 33.36%, #F8FAFC 74.09%);
+}   
+
+.containerTop {
+    @apply flex flex-row justify-between items-center gap-4 bg-primary-100 w-full rounded-3xl pl-[72px] overflow-clip;
+    @apply xl:h-[347px];
+
+}
+
+.leftTop {
+    @apply flex flex-col justify-start items-start gap-6;
+}
+
+.leftTop > h5 {
+    @apply font-bold text-secondary-400 text-[26px];
+}
+
+.leftTop > h6 {
+    @apply text-[42px] text-primary-500 font-bold;
+}
+
+.rightTop {
+    @apply flex flex-col gap-3;
+    @apply xl:-mr-20;
+}
+
+.rightFollowers {
+    @apply flex flex-row gap-3 justify-center items-center;
+}
+
+.rightFollowers1 {
+    @apply flex flex-row gap-3 justify-center items-center pl-16;
+}
+
+.rightIcon {
+    @apply h-32 w-32 shrink-0;
+}
+
+.containerBottom {
+    @apply relative bg-primary-300 h-[689px] rounded-3xl w-full;
+    @apply xl:pl-[200px];
+}
+
+.containerBottom > img {
+    @apply h-[689px] w-[461px] object-cover object-center;
+}
+
+.bottomContent {
+    @apply absolute top-0 py-24 flex flex-col justify-center items-center bg-primary-500 rounded-b-3xl;
+    @apply xl:w-[317px] xl:gap-14 xl:right-16 xl:px-4;
+}
+
+.bottomContent > h5 {
+    @apply text-primary-100 font-bold text-[42px];
+}
+
+.bottomContents {
+    @apply flex flex-col gap-2 justify-start items-start;
+}
+
+.bottomContents > h6 {
+    @apply font-bold text-[26px] text-primary-100;
+}
+
+.bottomContents > p {
+    @apply font-normal text-base text-primary-100;
+}
+
+.bottom {
+    @apply px-4 pb-8 border-b-2 border-primary-500;
+    @apply xl:w-2/3 xl:mr-auto;
+}
+
+.bottom > p {
+    @apply text-primary-700 text-base font-normal;
+}

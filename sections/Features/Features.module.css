@@ -1,0 +1,89 @@
+.container {
+    @apply flex flex-col justify-center items-center;
+    @apply xl:p-16 xl:gap-[56px];
+    background: linear-gradient(180deg, rgba(248, 250, 252, 0.00) 0%, rgba(248, 250, 252, 0.95) 33.36%, #F8FAFC 74.09%);
+}   
+
+.wrapper {
+    @apply bg-white rounded-3xl w-full flex flex-col justify-center items-center;
+    @apply xl:px-[148px] xl:py-[96px] xl:gap-24;
+}
+
+.containerTop {
+    @apply flex flex-col justify-center items-center gap-4;
+
+}
+
+.containerTop > h6 {
+    @apply font-bold text-secondary-400 text-[26px];
+}
+
+.containerTop > h4 {
+    @apply text-[68px] text-[#242E49] font-bold;
+}
+
+.containerBottom {
+    @apply flex flex-col justify-center items-center;
+    @apply xl:gap-32;
+}
+
+.feature {
+    @apply flex flex-row justify-center items-center;
+    @apply xl:gap-32;
+}
+
+.featureImage {
+    @apply w-[500px] aspect-square overflow-clip rounded-3xl shrink-0;
+}
+
+.featureImage > img {
+    @apply h-full w-full object-center object-cover;
+}
+
+.featureContent {
+    @apply flex flex-col justify-start items-start gap-4;
+}
+
+.featureContent > h5 {
+    @apply text-primary-700 font-bold text-[42px] mt-6;
+}
+
+.featureContent > p {
+    @apply text-primary-700 font-normal text-base;
+}
+
+.featureBadge {
+    @apply bg-primary-100 rounded-md px-4 py-2 flex justify-center items-center;
+}
+
+.featureBadge > p {
+    @apply font-bold text-base text-primary-700;
+}
+
+.featureList {
+    @apply flex flex-col justify-start items-start gap-4 mt-4 w-full;
+}
+
+.featureStats {
+    @apply flex flex-row justify-start items-start gap-4;
+}
+
+.featureStat {
+    @apply flex flex-col gap-2 justify-start items-start;
+}
+
+.featureStat > h5 {
+    @apply text-primary-700 text-[42px] font-bold;
+}
+
+.featureStat > p {
+    @apply text-primary-700 text-base font-bold;
+}
+
+.button {
+    @apply w-fit mt-6;
+}
+
+.buttonIcon {
+    @apply fill-white h-6 w-6;
+}

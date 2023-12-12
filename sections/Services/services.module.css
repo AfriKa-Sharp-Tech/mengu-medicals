@@ -1,0 +1,44 @@
+.container {
+    @apply flex flex-col justify-center items-center;
+    @apply xl:p-16 xl:gap-[56px];
+    background: linear-gradient(180deg, rgba(248, 250, 252, 0.00) 0%, rgba(248, 250, 252, 0.95) 33.36%, #F8FAFC 74.09%);
+}   
+
+.containerTop {
+    @apply flex flex-col justify-center items-center gap-4;
+
+}
+
+.containerTop > h6 {
+    @apply font-bold text-secondary-400 text-[26px];
+}
+
+.containerTop > h4 {
+    @apply text-[68px] text-[#242E49] font-bold;
+}
+
+.containerBottom {
+    @apply grid grid-cols-1 gap-4;
+    @apply xl:grid-cols-2 xl:px-[116px];
+}
+
+
+.userIcon {
+    @apply w-6 h-6 fill-primary-300;
+}
+
+.footer {
+    @apply flex flex-row justify-between items-center w-full px-[116px];
+}
+
+.buttonIcon {
+    @apply fill-off-white-100 h-6 w-6;
+}
+
+.footer > p {
+    @apply text-base font-normal text-primary-700;
+}
+
+.footer > p > a {
+    @apply text-base font-normal text-secondary-400;
+}

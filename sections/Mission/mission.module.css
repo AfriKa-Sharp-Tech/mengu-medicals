@@ -1,0 +1,47 @@
+.container {
+    @apply flex flex-col justify-center items-center bg-primary-700;
+    @apply xl:pt-[75px] xl:gap-[270px];
+}  
+
+.containerTop {
+    @apply flex flex-col gap-2 justify-center items-center;
+}
+
+.containerTop > h4 {
+    @apply text-off-white-400 font-bold text-[96px];
+}
+
+.containerTop > h5 {
+    @apply text-transparent text-[180px] bg-clip-text bg-[url("/images/happy.png")] bg-center bg-cover font-bold -my-8;
+}
+
+.containerTop > h6 {
+    @apply text-[42px] text-off-white-400 font-bold;
+}
+
+.containerTop > p {
+    @apply text-off-white-400 font-bold text-base text-center;
+    @apply xl:px-[189px];
+}
+
+.containerBottom {
+    @apply relative w-full z-30 h-full;
+}
+
+.bottomImage {
+    @apply w-full;
+    @apply xl:h-[932px]
+}
+
+.bottomImage > img {
+    @apply w-full h-full object-center object-cover opacity-100;
+}
+
+.backImage {
+    @apply absolute left-3 right-0 -top-[215px] -z-10;
+    @apply xl:h-[932px];
+}
+
+.backImage > img {
+    @apply w-full h-full object-center object-cover;
+}

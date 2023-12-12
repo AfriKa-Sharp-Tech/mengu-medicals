@@ -1,0 +1,53 @@
+.footer {
+    @apply relative overflow-clip bg-tertiary-700 z-40;
+    @apply xl:pt-16;
+}
+
+.curve {
+    @apply absolute -z-10 h-[1300px] w-[1100px] rounded-[400px] border-[170px] border-[#3f3f3f] -left-[400px] top-4;
+}
+
+.footerContents {
+    @apply flex flex-row justify-between items-start;
+    @apply xl:px-16 xl:pb-8;
+}
+
+.footerContent {
+    @apply flex justify-start items-start;
+}
+
+.footerContent1 {
+    @apply flex flex-col justify-start items-start gap-2;
+}
+
+.footerContent1 > h6 {
+    @apply text-off-white-100 border-b-[3px] border-b-primary-300 pb-2 text-[26px] font-bold mb-1;
+}
+
+.footerLink {
+    @apply text-off-white-100 text-base font-normal hover:font-bold;
+}
+
+.socials {
+    @apply flex flex-row justify-start items-center gap-8;
+}
+
+.socialIcon {
+    @apply w-8 h-8 fill-off-white-100;
+}
+
+.footerFoot {
+    @apply bg-off-white-100 border-b-[20px] border-b-primary-300 flex flex-row justify-between items-center px-16;
+}
+
+.footerFoot > p {
+    @apply text-[10px] text-secondary-700 font-normal;
+}
+
+.footerButton {
+    @apply w-14 aspect-square flex justify-center items-center bg-primary-300;
+}
+
+.topIcon {
+    @apply w-8 h-8 -rotate-90 fill-off-white-100;
+}

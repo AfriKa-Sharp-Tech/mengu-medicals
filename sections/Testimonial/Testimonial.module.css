@@ -1,0 +1,148 @@
+.container {
+    @apply flex flex-col justify-center items-center;
+    @apply xl:p-16 xl:gap-[56px];
+}   
+
+.containerTop {
+    @apply flex flex-col justify-center items-center gap-4;
+
+}
+
+.containerTop > h6 {
+    @apply font-bold text-secondary-400 text-[26px];
+}
+
+.containerTop > h4 {
+    @apply text-[68px] text-[#242E49] font-bold;
+}
+
+.containerBottom {
+    @apply flex flex-col justify-center items-center gap-[120px];
+}
+
+.bottomBottom {
+    @apply flex flex-row w-full items-center justify-center gap-[80px] bg-primary-700 rounded-3xl p-[80px];
+}
+
+.bottomImage {
+    @apply rounded-3xl w-[604px] h-[478px] shrink-0;
+}
+
+.bottomImage > img {
+    @apply w-full h-full object-center object-cover;
+}
+
+.bottomContent {
+    @apply flex flex-col justify-center items-start gap-12;
+}
+
+.bottomContent > h6 {
+    @apply text-primary-300 text-[26px] font-bold;
+}
+
+.bottomContent > h5 {
+    @apply text-[42px] font-bold text-white;
+}
+
+.request {
+    @apply flex flex-row justify-center items-center bg-white px-6 py-2 gap-6 rounded-[30px];
+}
+
+.requestIcon {
+    @apply w-8 h-8 fill-primary-700 shrink-0;
+}
+
+.requestButton {
+    @apply px-6 py-2 bg-secondary-400 rounded-[30px] text-white text-base font-bold shrink-0;
+}
+
+.requestInput::placeholder {
+    @apply text-[20px] font-normal text-[#64748B];
+}
+
+.bottomCarousel {
+    @apply flex flex-row justify-center items-end w-[1092px];
+}
+
+
+.carouselContents {
+    @apply relative overflow-clip bg-primary-300 h-[492px] w-[600px] rounded-3xl flex flex-col justify-center items-start -mr-10 gap-8;
+    @apply xl:p-8;
+}
+
+.carouselContents1 {
+    @apply relative overflow-clip bg-primary-300 h-full w-full rounded-3xl flex flex-row justify-start items-end gap-8;
+}
+
+.prevContent {
+    @apply absolute -translate-x-[110%] opacity-0;
+}
+
+.currentContent {
+    @apply relative;
+}
+
+.nextContent {
+    @apply absolute translate-x-[110%] opacity-0;
+}
+
+.carouselContent {
+    @apply flex flex-col justify-start items-start gap-4 duration-500 ease-in-out;
+}
+
+.carouselContent > h5 {
+    @apply text-off-white-100 text-[42px] font-bold;
+}
+
+.carouselContent > p {
+    @apply text-[26px] text-off-white-100 font-normal w-[390px];
+}
+
+.carouselControls {
+    @apply flex flex-row justify-start items-center gap-2;
+}
+
+.carouselControl {
+    @apply outline-none w-[80px] aspect-square bg-primary-100 flex justify-center items-center rounded-[14px];
+}
+
+.controlIcon {
+    @apply h-6 w-6 fill-primary-700;
+}
+
+.indicators {
+    @apply flex flex-row gap-2 justify-start items-center w-[200px] ml-4;
+}
+
+.controlIndicate {
+    @apply h-2 w-full rounded-sm bg-primary-100 overflow-clip cursor-pointer;
+}
+
+.controlIndicator {
+    @apply h-full w-full duration-500 ease-in-out;
+}
+
+
+.carouselImages {
+    @apply relative flex justify-center items-center z-10 h-[624px] w-[608px] rounded-3xl overflow-clip;
+}
+
+.prevImage {
+    @apply absolute -translate-x-[100%] opacity-40;
+}
+
+.currentImage {
+    @apply relative;
+}
+
+.nextImage {
+    @apply absolute translate-x-[100%] opacity-40;
+}
+
+.carouselImage {
+    @apply h-full w-full duration-500 ease-in-out;
+}
+
+.carouselImage > img {
+    @apply h-full w-full object-cover object-center;
+}

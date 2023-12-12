@@ -1,0 +1,19 @@
+.progress {
+    @apply w-full flex flex-col items-center justify-start gap-4;
+}
+
+.progressHeader {
+    @apply flex flex-row justify-between items-center w-full;
+}
+
+.progressHeader > p {
+    @apply text-primary-700 text-base font-bold;
+}
+
+.progressBar {
+    @apply w-full h-2 bg-secondary-100 rounded-sm overflow-clip;
+}
+
+.progressValue {
+    @apply h-full bg-secondary-200;
+}

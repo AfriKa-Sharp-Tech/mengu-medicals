@@ -1,0 +1,142 @@
+.container {
+    @apply bg-secondary-100 flex flex-col justify-center items-start;
+    @apply xl:px-16 xl:py-14 xl:gap-16;
+}
+
+.containerTop {
+    @apply flex flex-row gap-4 justify-between items-end w-full;
+}
+
+.topContent {
+    @apply flex flex-col gap-4 justify-start items-start;
+}
+
+.topContent > h6 {
+    @apply text-secondary-400 font-bold text-[26px];
+}
+
+.topContent > h4 {
+    @apply text-primary-700 font-bold text-[68px];
+}
+
+.containerBottom {
+    @apply flex flex-row justify-between items-center gap-16 w-full overflow-clip;
+}
+
+.bottomLeft {
+    @apply flex flex-col justify-center items-center w-[310px];
+}
+
+.bottomLeft > p {
+    @apply text-primary-700 font-bold text-[26px] px-4 py-[21px];
+}
+
+.bottomImage {
+    @apply h-[400px] w-[310px] relative;
+}
+
+.bottomImage > img {
+    @apply w-full h-full object-cover object-center
+}
+
+.bottomImage > p {
+    @apply absolute bottom-0 left-[22px] text-[96px] font-bold text-primary-700;
+}
+
+.bottomRight {
+    @apply flex flex-col justify-center items-center gap-6 overflow-clip w-full;
+}
+
+.bottomCards {
+    @apply flex flex-row justify-start items-center gap-6 w-full overflow-clip;
+}
+
+.bottomCard {
+    @apply p-4 rounded-3xl bg-white flex flex-col justify-center items-start gap-6 duration-500 ease-in-out;
+    @apply xl:w-[342px]
+}
+
+.bottomPrev {
+    @apply  -ml-[30%] opacity-0;
+    @apply xl:-ml-[360px];
+}
+
+.bottomCurrent {
+    @apply relative;
+}
+
+.bottomNext {
+    @apply  relative;
+}
+
+.badges {
+    @apply absolute top-4 left-4 flex flex-row gap-2 justify-start items-center;
+}
+
+.badge {
+    @apply p-2 rounded-md bg-primary-100
+}
+
+.badge > p {
+    @apply text-primary-700 font-bold text-[10px];
+}
+
+.cardImage {
+    @apply relative w-[310px] aspect-square rounded-3xl overflow-clip;
+}
+
+.cardImage > img {
+    @apply w-full h-full object-center object-cover;
+}
+
+.cardAuthor {
+    @apply flex flex-row justify-start items-center gap-2;
+}
+
+.cardAuthor > p {
+    @apply text-base text-primary-700 font-normal;
+}
+
+.cardDot {
+    @apply w-1 aspect-square rounded-sm bg-grey-400;
+}
+
+.bottomCard > h6 {
+    @apply text-[26px] text-primary-700 font-bold;
+}
+
+.arrow {
+    @apply flex justify-center items-center w-16 aspect-square rounded-2xl bg-primary-500;
+}
+
+.arrowIcon {
+    @apply fill-white h-6 w-6;
+}
+
+.carouselControls {
+    @apply flex flex-row justify-start items-center gap-16 w-full;
+}
+
+.carouselControl {
+    @apply outline-none w-[80px] aspect-square bg-primary-100 flex justify-center items-center rounded-[14px];
+}
+
+.controlIcon {
+    @apply h-6 w-6 fill-primary-700;
+}
+
+.indicators {
+    @apply flex flex-row gap-2 justify-start items-center w-full ml-4;
+}
+
+.controlIndicate {
+    @apply h-2 w-full rounded-sm bg-primary-100 overflow-clip cursor-pointer;
+}
+
+.controlIndicator {
+    @apply h-full w-full duration-500 ease-in-out;
+}
+
+.buttonWrapper {
+    @apply flex flex-row justify-center items-center gap-2;
+}
