@@ -39,6 +39,10 @@
     @apply h-32 w-32 shrink-0;
 }
 
+.bottomWrapper {
+    @apply flex flex-col justify-center items-center gap-4;
+}
+
 .containerBottom {
     @apply relative bg-primary-300 h-[689px] rounded-3xl w-full;
     @apply xl:pl-[200px];

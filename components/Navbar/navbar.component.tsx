@@ -8,10 +8,10 @@ import Link from "next/link";
 const Navbar: React.FC<Props> = ({ position = 0 }) => {
   const router = useRouter();
   const navLinks: NavLink[] = [
-    { value: "#", label: "Home" },
-    { value: "#features", label: "About us" },
-    { value: "#how-it-works", label: "Services" },
-    { value: "#about-us", label: "Contact us" },
+    { value: "/", label: "Home" },
+    { value: "/about-us", label: "About us" },
+    { value: "/services", label: "Services" },
+    { value: "/contact-us", label: "Contact us" },
   ];
   return (
     <nav className={styles.container}>

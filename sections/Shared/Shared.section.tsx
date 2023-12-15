@@ -13,7 +13,7 @@ const Shared: React.FC<Props> = ({ flip = false }) => {
     <section
       id="shared"
       className={`${styles.container} ${
-        flip ? "flex-col-reverse" : "flex-col"
+        flip ? "flex-col-reverse xl:!gap-[90px]" : "flex-col"
       }`}
     >
       <div className={styles.containerTop}>
@@ -46,44 +46,47 @@ const Shared: React.FC<Props> = ({ flip = false }) => {
           </div>
         </div>
       </div>
-      <div className={styles.containerBottom}>
-        <img src={Assets.staff} alt="Staff" />
-        <div className={styles.bottomContent}>
-          <h5>Professionals Surgeron</h5>
-          <div className={styles.bottomContents}>
-            <h6>Professionals</h6>
-            <p>
-              We offerhealthcare professionals access to cutting-edge AI-driven
-              health assessments and data analytics.lthcare professionals access
-              to cutting-edge AI-driven health assessments
-            </p>
-          </div>
-          <div className={styles.bottomContents}>
-            <h6>Professionals</h6>
-            <p>
-              We offerhealthcare professionals access to cutting-edge AI-driven
-              health assessments and data analytics.
-            </p>
-          </div>
-          <div className={styles.bottomContents}>
-            <h6>Professionals</h6>
-            <p>
-              We offerhealthcare professionals access to cutting-edge AI-driven
-              health assessments and data analytics.
-            </p>
+      <div className={styles.bottomWrapper}>
+        <div className={styles.containerBottom}>
+          <img src={Assets.staff} alt="Staff" />
+          <div className={styles.bottomContent}>
+            <h5>Professionals Surgeron</h5>
+            <div className={styles.bottomContents}>
+              <h6>Professionals</h6>
+              <p>
+                We offerhealthcare professionals access to cutting-edge
+                AI-driven health assessments and data analytics.lthcare
+                professionals access to cutting-edge AI-driven health
+                assessments
+              </p>
+            </div>
+            <div className={styles.bottomContents}>
+              <h6>Professionals</h6>
+              <p>
+                We offerhealthcare professionals access to cutting-edge
+                AI-driven health assessments and data analytics.
+              </p>
+            </div>
+            <div className={styles.bottomContents}>
+              <h6>Professionals</h6>
+              <p>
+                We offerhealthcare professionals access to cutting-edge
+                AI-driven health assessments and data analytics.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div className={styles.bottom}>
-        <p>
-          We offerhealthcare professionals access to cutting-edge AI-driven
-          health assessments and data analytics.We offerhealthcare professionals
-          access to cutting-edge AI-driven health assessments and data
-          analytics.We offerhealthcare professionals access to cutting-edge
-          AI-driven health assessments and data analytics.We offerhealthcare
-          professionals access to cutting-edge AI-driven health assessments and
-          data analytics.
-        </p>
+        <div className={styles.bottom}>
+          <p>
+            We offerhealthcare professionals access to cutting-edge AI-driven
+            health assessments and data analytics.We offerhealthcare
+            professionals access to cutting-edge AI-driven health assessments
+            and data analytics.We offerhealthcare professionals access to
+            cutting-edge AI-driven health assessments and data analytics.We
+            offerhealthcare professionals access to cutting-edge AI-driven
+            health assessments and data analytics.
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -20,6 +20,28 @@
     linear-gradient(215deg, rgba(28, 179, 194, 0.00) 0%, rgba(28, 179, 194, 0.27) 100%);
 }
 
+.container1 {
+    @apply relative -mt-[96px] h-[856px] flex flex-col justify-end items-start;
+    @apply xl:py-14 xl:px-16;
+    
+}
+
+.container1::before{
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.6;
+    background: linear-gradient(223deg, rgba(194, 28, 96, 0.90) 0%, rgba(194, 28, 96, 0.90) 29.58%, rgba(194, 28, 96, 0.00) 100%), 
+    linear-gradient(318deg, rgba(194, 28, 96, 0.70) 0%, rgba(194, 28, 96, 0.70) 29.58%, rgba(194, 28, 96, 0.00) 100%),  
+    linear-gradient(318deg, rgba(194, 28, 96, 0.25) 0%, rgba(194, 28, 96, 0.25) 29.58%, rgba(194, 28, 96, 0.00) 100%),
+    linear-gradient(221deg, rgba(28, 179, 194, 0.00) 0%, rgba(28, 179, 194, 0.80) 100%),
+    linear-gradient(221deg, rgba(28, 179, 194, 0.00) 0%, rgba(28, 179, 194, 0.15) 100%),
+    linear-gradient(215deg, rgba(28, 179, 194, 0.00) 0%, rgba(28, 179, 194, 0.27) 100%);
+}
+
 .content {
     @apply flex flex-col z-10 justify-start items-start gap-6 w-1/2;
 }
