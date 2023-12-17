@@ -1,0 +1,47 @@
+.container {
+    @apply flex justify-center items-center;
+    @apply xl:p-16;
+}
+
+.advert {
+    @apply relative flex flex-col overflow-clip justify-center items-center rounded-3xl w-full;
+    @apply xl:flex-row xl:h-[403px];
+}
+
+.advertLeft {
+    @apply flex flex-row h-full justify-start items-start p-8 bg-primary-700 gap-6;
+    @apply xl:w-[33.16%] xl:flex-col;
+}
+
+.advertLeft > h5 {
+    @apply text-secondary-100 font-bold text-base;
+}
+
+.advertLeft > h6 {
+    @apply text-off-white-100 font-bold text-[26px];
+}
+
+.advertLeft > p {
+    @apply text-white font-normal text-base;
+}
+
+.button {
+    @apply w-fit mt-2;
+}
+
+.buttonIcon {
+    @apply fill-white h-6 w-6;
+}
+
+.advertRight {
+    @apply bg-white;
+    @apply xl:w-[66.84%];
+}
+
+.advertRight > img {
+    @apply w-full h-full object-center object-cover;
+}
+
+.advertIcon {
+    @apply absolute z-50 top-[18px] right-[30px]  w-[243px] h-[91px] bg-primary-700 rounded;
+}
