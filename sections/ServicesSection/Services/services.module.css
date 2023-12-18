@@ -1,0 +1,71 @@
+.container {
+    @apply flex flex-col justify-center items-center;
+    @apply xl:flex-row xl:gap-[40px] xl:px-16 xl:py-[85px];
+}
+
+.container1 {
+    @apply flex flex-col justify-start items-start gap-6;
+    @apply xl:w-1/2;
+}
+
+.container1 > h4 {
+    @apply text-primary-700 font-bold text-[68px];
+}
+
+.container1 > div  {
+    @apply flex flex-col justify-start  items-start gap-9;
+}
+
+.container1 > div > p {
+    @apply text-primary-700 font-normal text-base;
+}
+
+.list {
+    @apply flex flex-col justify-start items-start gap-6;
+}
+
+.button {
+    @apply w-fit mt-8;
+}
+
+.buttonIcon {
+    @apply h-6 w-6 fill-white;
+}
+
+.container2 {
+    @apply flex flex-row gap-4 justify-start items-start;
+    @apply xl:w-1/2;
+}
+
+.imageContainer {
+    @apply flex flex-col gap-4 justify-start items-start;
+    @apply xl:w-1/2;
+}
+
+.image1 {
+    @apply overflow-clip rounded-3xl h-[98px] w-full;
+}
+
+.image2 {
+    @apply overflow-clip rounded-3xl h-[303px] w-full;
+}
+
+.image3 {
+    @apply overflow-clip rounded-3xl h-[189px] w-full;
+}
+
+.image4 {
+    @apply overflow-clip rounded-3xl h-[417px] w-full;
+}
+
+.image5 {
+    @apply overflow-clip rounded-3xl h-[200px] w-full;
+}
+
+.image1 > img, 
+.image2 > img,
+.image3 > img,
+.image4 > img,
+.image5 > img {
+    @apply h-full w-full object-center object-cover;
+}

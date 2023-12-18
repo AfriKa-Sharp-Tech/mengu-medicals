@@ -21,3 +21,69 @@
     @apply grid grid-cols-1 gap-4;
     @apply xl:grid-cols-2 xl:px-[116px];
 }
+
+.faqTypes {
+    @apply flex flex-row justify-center items-center gap-4
+}
+
+.faqType {
+    @apply outline-none w-fit px-4 py-2 rounded-md bg-primary-100 text-primary-700 font-bold text-base duration-300 ease-in-out;
+}
+
+.faqTypeActive {
+    @apply !text-white !bg-primary-300;
+}
+
+.containerBottom {
+    @apply flex flex-col justify-start items-start;
+    @apply xl:flex-row xl:gap-32;
+}
+
+.bottomLeft {
+    @apply flex flex-col justify-start items-start gap-4;
+}
+
+.bottomLeft > h5 {
+    @apply text-primary-700 font-bold text-[42px];
+}
+
+.bottomLeft > p {
+    @apply text-primary-700 font-normal text-base;
+}
+
+.bottomLeft > p > a {
+    @apply text-secondary-400 font-normal text-base;
+}
+
+.bottomRight {
+    @apply flex flex-col justify-start items-start gap-[11px];
+}
+
+.accordion {
+    @apply flex flex-row gap-[10px] overflow-clip max-h-[56px] justify-start items-start rounded-md bg-white p-4 duration-300 ease-in-out;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.accordionActive {
+    @apply max-h-[400px];
+}
+
+.accordionContents {
+    @apply flex flex-col justify-start items-start;
+}
+
+.accordionContents > p  {
+    @apply text-primary-700 text-base font-bold;
+}
+
+.accordionAnswer {
+    @apply px-4 py-2 bg-off-white-400 rounded-lg mt-4;
+}
+
+.accordionAnswer > p {
+    @apply text-base font-normal text-primary-700;
+}
+
+.squareIcon {
+    @apply stroke-primary-700 h-6 w-6 duration-500 ease-in-out;
+}
