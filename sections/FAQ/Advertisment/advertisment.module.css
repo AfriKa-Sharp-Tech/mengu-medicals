@@ -43,5 +43,9 @@
 }
 
 .advertIcon {
-    @apply absolute z-50 top-[18px] right-[30px]  w-[243px] h-[91px] bg-primary-700 rounded;
+    @apply absolute z-50 top-[18px] right-[30px]  w-[243px] h-[91px] bg-primary-700 rounded flex justify-center items-center;
+}
+
+.menguIcon {
+    @apply h-[59px] w-[211px];
 }

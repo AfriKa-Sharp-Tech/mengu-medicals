@@ -4,6 +4,7 @@ import styles from "./advertisment.module.css";
 import Button, { ButtonType } from "@/components/Button/Button.component";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
 import { Assets } from "@/static/assets/assets";
+import MenguIcon from "@/components/Icons/MenguIcon";
 
 const Advertisment: React.FC = () => {
   return (
@@ -28,7 +29,9 @@ const Advertisment: React.FC = () => {
         <div className={styles.advertRight}>
           <img src={Assets.feature1} alt="BabyImage" />
         </div>
-        <div className={styles.advertIcon}></div>
+        <div className={styles.advertIcon}>
+          <MenguIcon className={styles.menguIcon} color="#fff" />
+        </div>
       </div>
     </section>
   );

@@ -13,7 +13,12 @@
 }
 
 .footerContent {
-    @apply flex justify-start items-start;
+    @apply flex justify-start items-center bg-white h-[90px] w-[324px];
+    border-radius: 0% 26% 42% 0% / 29% 1% 99% 28%;
+}
+
+.menguIcon {
+    @apply w-[211px] h-[59px] mr-20;
 }
 
 .footerContent1 {

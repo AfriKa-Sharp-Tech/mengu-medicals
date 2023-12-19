@@ -4,9 +4,11 @@ import Advertisment from "@/sections/FAQ/Advertisment/advertisment.section";
 import Faqs from "@/sections/FAQ/FAQs/faqs.section";
 import Footer from "@/sections/Footer/footer.section";
 import Header from "@/sections/HomeHeader/Header.section";
+import { UseScrollPosition } from "@/utils/UseScrollPosition";
 import React from "react";
 
 const Services: React.FC = (): JSX.Element => {
+  const position = UseScrollPosition();
   return (
     <div>
       <Seo
@@ -16,7 +18,7 @@ const Services: React.FC = (): JSX.Element => {
       />
 
       <main className="relative">
-        <Navbar />
+        <Navbar position={position} />
         <Header title="Any Other Question?" />
         <Faqs />
         <Advertisment />

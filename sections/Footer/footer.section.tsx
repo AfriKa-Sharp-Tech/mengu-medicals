@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
       <div className={styles.curve} />
       <div className={styles.footerContents}>
         <div className={styles.footerContent}>
-          <MenguIcon className="" />
+          <MenguIcon className={styles.menguIcon} />
         </div>
         <div className={styles.footerContent1}>
           <h6>Quick Links</h6>

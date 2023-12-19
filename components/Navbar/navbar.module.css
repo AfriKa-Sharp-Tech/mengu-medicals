@@ -1,10 +1,15 @@
 .container {
-    @apply sticky top-0 z-50 flex flex-row justify-between items-center pr-16 w-full gap-[40px];
+    @apply sticky top-0 z-50 flex flex-row justify-between items-center pr-16 w-full gap-[40px] duration-500 ease-in-out;
 }
 
-.iconContainer {}
+.iconContainer {
+    @apply flex justify-center items-center h-[96px] w-[372px] bg-white;
+    border-radius: 0% 26% 42% 0% / 29% 1% 99% 28%;
+}
 
-.menguIcon {}
+.menguIcon {
+    @apply w-[211px] h-[59px] mr-20;
+}
 
 .navLinks {
     @apply ml-auto flex flex-row justify-between items-center gap-[40px];

@@ -11,14 +11,16 @@ import Seo from '@/components/seo/Seo';
 import Shared from '@/sections/Shared/Shared.section';
 import Mission from '@/sections/Mission/mission.section';
 import Pathology from '@/sections/Pathologies/pathologies.section';
+import { UseScrollPosition } from '@/utils/UseScrollPosition';
 
 const Index: NextPageWithLayout = (): JSX.Element => {
+  const position = UseScrollPosition();
   return (
     <div>
       <Seo title={'Mengu Medicals'} description={'Mengu Medicals Home page'} siteName={'Mengu Medicals'} />
 
       <main className='relative'>
-        <Navbar />
+        <Navbar position={position} />
         <HomeHeader />
         <Shared />
         <Mission />

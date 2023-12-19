@@ -14,7 +14,7 @@ const Navbar: React.FC<Props> = ({ position = 0 }) => {
     { value: "/contact-us", label: "Contact us" },
   ];
   return (
-    <nav className={styles.container}>
+    <nav className={`${styles.container} ${position > 600 ? "bg-primary-700 shadow-secondary-300 shadow-md drop-shadow-md" : ""}`}>
       <div className={styles.iconContainer}>
         <MenguIcon className={styles.menguIcon} />
       </div>
@@ -29,7 +29,7 @@ const Navbar: React.FC<Props> = ({ position = 0 }) => {
           </Link>
         ))}
       </div>
-      <button className={styles.donateButton}>Donate</button>
+      <button className={styles.donateButton}>Grant</button>
     </nav>
   );
 };

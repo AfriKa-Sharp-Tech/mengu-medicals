@@ -7,9 +7,11 @@ import Service2 from "@/sections/ServicesSection/Services/service2.section";
 import Service3 from "@/sections/ServicesSection/Services/service3.section";
 import Service4 from "@/sections/ServicesSection/Services/service4.section";
 import Shared from "@/sections/Shared/Shared.section";
+import { UseScrollPosition } from "@/utils/UseScrollPosition";
 import React from "react";
 
 const Services: React.FC = (): JSX.Element => {
+  const position = UseScrollPosition();
   return (
     <div>
       <Seo
@@ -19,7 +21,7 @@ const Services: React.FC = (): JSX.Element => {
       />
 
       <main className="relative">
-        <Navbar />
+        <Navbar position={position} />
         <Header title="Explore Our Services" />
         <Shared flip /> 
         <Service1 />
