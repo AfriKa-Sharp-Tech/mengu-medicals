@@ -24,7 +24,7 @@
 
 
 .userIcon {
-    @apply w-6 h-6 fill-primary-300;
+    @apply w-6 h-6 stroke-secondary-400;
 }
 
 .footer {

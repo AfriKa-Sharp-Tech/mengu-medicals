@@ -1,0 +1,148 @@
+.container {
+    @apply flex flex-col-reverse justify-start items-start bg-off-white-200;
+    @apply xl:flex-row xl:gap-5 xl:px-16 xl:py-14;
+}
+
+.containerLeft {
+
+
+}
+
+.containerRight {
+    @apply rounded-3xl bg-white flex flex-col gap-4;
+    @apply xl:px-14 xl:py-8 xl:w-[60.9%];
+}
+
+.containerRight > h5 {
+    @apply text-secondary-400 text-[42px] font-bold;
+}
+
+.containerRight > h6 {
+    @apply text-primary-700 text-[26px] font-normal;
+}
+
+.containerRight > p {
+    @apply text-base font-normal text-primary-700;
+}
+
+.p1 {
+    @apply !text-primary-700;
+}
+
+.p2 {
+    @apply !text-[#5D6A85]
+}
+
+.firstImageContainer {
+    @apply relative;
+}
+
+.firstContainer {
+    @apply absolute z-20 top-1/2 -translate-y-1/2 bg-primary-500 w-fit rounded-3xl flex flex-col justify-start items-start gap-4;
+    @apply xl:px-8 xl:py-6 xl:w-[391px];
+}
+
+.firstContainer > h6 {
+    @apply text-off-white-100 font-bold text-[26px];
+}
+
+.firstContainer > p {
+    @apply text-off-white-100 font-normal text-base;
+}
+
+.firstImage {
+    @apply rounded-3xl overflow-clip ml-auto;
+    @apply xl:w-[612px] xl:h-[344px];
+}
+
+.firstImage > img {
+    @apply h-full w-full object-center object-cover;
+}
+
+.secondContainer {
+    @apply flex flex-col justify-start items-start;
+    @apply xl:flex-row xl:gap-4;
+}
+
+
+.secondImage1 {
+    @apply w-1/4 h-[172px] rounded-3xl overflow-clip;
+}
+
+.secondImage1 > img {
+    @apply w-full h-full object-center object-cover;
+}
+
+.secondContents {
+    @apply bg-primary-500 rounded-3xl w-1/4 h-[172px];
+    @apply xl:px-4 xl:py-8;
+}
+
+.secondContents > h6 {
+    @apply text-[26px] font-bold text-off-white-100;
+}
+
+.secondContents > h6 > span {
+    @apply text-[26px] font-bold text-primary-300;
+}
+
+.secondImage2 {
+    @apply w-1/2 h-[172px] rounded-3xl overflow-clip;
+}
+
+.secondImage2 > img {
+    @apply w-full h-full object-center object-cover;
+}
+
+.thirdContainer {
+    @apply flex flex-col justify-start items-start;
+    @apply xl:flex-row xl:gap-4;
+}
+
+.thirdLeft {
+    @apply flex flex-col gap-4;
+    @apply xl:w-1/2;
+}
+
+
+.thirdLeftImage {
+    @apply w-full h-[153.5px] overflow-clip rounded-3xl;
+}
+
+.thirdLeftImage > img {
+    @apply w-full h-full object-cover object-center;
+}
+
+.thirdLeftContent {
+    @apply rounded-3xl bg-primary-100 h-full;
+    @apply xl:px-6 xl:py-8;
+}
+
+.thirdLeftContent > h6 {
+    @apply font-bold text-[26px] text-primary-700;
+}
+
+.thirdLeftContent > h6 > span {
+    @apply font-bold text-[26px] text-secondary-400;
+}
+
+.thirdRight {
+    @apply h-[323px] overflow-clip rounded-3xl;
+    @apply xl:w-1/2;
+}
+
+.thirdRight > img {
+    @apply w-full h-full object-cover object-center;
+}
+
+.list {
+    @apply flex flex-col gap-4 justify-start items-start;
+}
+
+.lastImage {
+    @apply w-full h-[344px] rounded-3xl overflow-clip;
+}
+
+.lastImage > img {
+    @apply w-full h-full object-center object-cover;
+}

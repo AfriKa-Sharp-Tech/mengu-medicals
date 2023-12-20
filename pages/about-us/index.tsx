@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar/navbar.component";
 import Seo from "@/components/seo/Seo";
+import About from "@/sections/About/AboutUS/about.section";
 import Footer from "@/sections/Footer/footer.section";
 import Header from "@/sections/HomeHeader/Header.section";
 import { UseScrollPosition } from "@/utils/UseScrollPosition";
@@ -18,6 +19,7 @@ const Services: React.FC = (): JSX.Element => {
       <main className="relative">
         <Navbar position={position} />
         <Header title="Get to Know More About Us" />
+        <About />
         <Footer />
       </main>
     </div>
