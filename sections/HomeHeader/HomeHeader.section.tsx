@@ -16,8 +16,19 @@ const HomeHeader: React.FC = () => {
           kontrasat nonade. att apiniras. Vanat bektig.
         </p>
         <div className={styles.buttonWrapper}>
-          <Button text="Speak to an expert" type={ButtonType.SEC} icon={<ChevronIcon className={styles.buttonIcon} />} />
-          <Button text="Learn more about us" icon={<ChevronIcon className={styles.buttonIcon2} />} />
+          <div className={styles.button}>
+            <Button
+              text="Speak to an expert"
+              type={ButtonType.SEC}
+              icon={<ChevronIcon className={styles.buttonIcon} />}
+            />
+          </div>
+          <div className={styles.button}>
+            <Button
+              text="Learn more about us"
+              icon={<ChevronIcon className={styles.buttonIcon2} />}
+            />
+          </div>
         </div>
       </div>
     </section>

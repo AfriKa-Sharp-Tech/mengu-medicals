@@ -14,6 +14,18 @@ module.exports = {
       "./sections/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
+      screens: {
+        sm: "390px",
+        md: "744px",
+        lg: "1133px",
+        xl: "1440px",
+        "2xl": "1920px",
+  
+        "max-sm": { max: "639px" },
+        "max-md": { max: "767px" },
+        "max-lg": { max: "1023px" },
+        "max-xl": { max: "1311px" },
+      },
       extend: {
         colors: {
           primary: {

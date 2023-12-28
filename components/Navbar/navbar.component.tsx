@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styles from "./navbar.module.css";
 import { useRouter } from "next/router";
 import MenguIcon from "../Icons/MenguIcon";
 import Link from "next/link";
+import HelpIcon from "../Icons/HelpIcon";
 
 const Navbar: React.FC<Props> = ({ position = 0 }) => {
   const router = useRouter();
+  console.log(position);
+  const [active, setActive] = useState<boolean>(false);
   const navLinks: NavLink[] = [
     { value: "/", label: "Home" },
     { value: "/about-us", label: "About us" },
@@ -14,7 +17,13 @@ const Navbar: React.FC<Props> = ({ position = 0 }) => {
     { value: "/contact-us", label: "Contact us" },
   ];
   return (
-    <nav className={`${styles.container} ${position > 600 ? "bg-primary-700 shadow-secondary-300 shadow-md drop-shadow-md" : ""}`}>
+    <nav
+      className={`${styles.container} ${
+        position > 600
+          ? "bg-primary-700 shadow-secondary-300 shadow-md drop-shadow-md !fixed"
+          : ""
+      }`}
+    >
       <div className={styles.iconContainer}>
         <MenguIcon className={styles.menguIcon} />
       </div>
@@ -29,7 +38,45 @@ const Navbar: React.FC<Props> = ({ position = 0 }) => {
           </Link>
         ))}
       </div>
+
+      <div
+        onClick={() => setActive(!active)}
+        className={`${styles.linkContainer} ${
+          active ? "bg-white" : "bg-transparent"
+        }`}
+      >
+        <div
+          className={`${styles.navLinksMd} ${active ? styles.activeLinks : ""}`}
+        />
+      </div>
       <button className={styles.donateButton}>Grant</button>
+      <div
+        onClick={() => setActive(!active)}
+        className={`${styles.overlayContainer} ${
+          active ? "right-0" : "!-right-full"
+        }`}
+      >
+        <div
+          onClick={(e) => e.stopPropagation()}
+          className={`${styles.navLinksContainer}`}
+        >
+          <div className={styles.navLinksMD}>
+            {navLinks.map((navlink: NavLink, index: number) => (
+              <Link
+                key={index + navlink.value}
+                href={navlink.value}
+                className={styles.navLinkMD}
+              >
+                {navlink.label}
+              </Link>
+            ))}
+            <button className={styles.donateButtonMD}>Grant</button>
+            <div className={styles.help}>
+              <HelpIcon className={styles.helpIcon} />
+            </div>
+          </div>
+        </div>
+      </div>
     </nav>
   );
 };

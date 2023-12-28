@@ -27,7 +27,17 @@ const Footer: React.FC = () => {
       <div className={styles.curve} />
       <div className={styles.footerContents}>
         <div className={styles.footerContent}>
-          <MenguIcon className={styles.menguIcon} />
+          <div className={styles.mengu}>
+            <MenguIcon className={styles.menguIcon} />
+          </div>
+          <div className={`${styles.socials} flex md:!hidden`}>
+            <button>
+              <LinkedInIcon className={styles.socialIcon} />
+            </button>
+            <button>
+              <FaceBookIcon className={styles.socialIcon} />
+            </button>
+          </div>
         </div>
         <div className={styles.footerContent1}>
           <h6>Quick Links</h6>
@@ -53,7 +63,7 @@ const Footer: React.FC = () => {
             </Link>
           ))}
         </div>
-        <div className={styles.footerContent1}>
+        <div className={`${styles.footerContent1} !hidden md:flex`}>
           <h6>Social links</h6>
           <div className={styles.socials}>
             <button>
@@ -67,8 +77,8 @@ const Footer: React.FC = () => {
       </div>
       <div className={styles.footerFoot}>
         <p>
-          ©{new Date().getFullYear()} all right reserved to Cabinet Mengu medical, Hopital de la Tour,
-          geneva switzaland Avenue J.- D. Maillard 3CH-1217 Meyrin
+          ©{new Date().getFullYear()} all right reserved to Cabinet Mengu
+          medical, Hopital de la Tour, geneva.
         </p>
         <div className={styles.footerButton}>
           <ChevronIcon className={styles.topIcon} />

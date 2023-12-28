@@ -1,51 +1,60 @@
 .container {
-    @apply flex flex-col justify-center items-center;
-    @apply xl:p-16 xl:gap-[56px];
+    @apply flex flex-col justify-center items-center py-11 gap-14;
+    @apply lg:p-16;
     background: linear-gradient(180deg, rgba(248, 250, 252, 0.00) 0%, rgba(248, 250, 252, 0.95) 33.36%, #F8FAFC 74.09%);
 }   
 
 .wrapper {
-    @apply bg-white rounded-3xl w-full flex flex-col justify-center items-center;
-    @apply xl:px-[148px] xl:py-[96px] xl:gap-24;
+    @apply bg-white rounded-3xl w-full flex flex-col justify-center items-center gap-12;
+    @apply lg:px-[148px] lg:py-[96px] lg:gap-24;
 }
 
 .containerTop {
     @apply flex flex-col justify-center items-center gap-4;
-
 }
 
 .containerTop > h6 {
-    @apply font-bold text-secondary-400 text-[26px];
+    @apply font-bold text-secondary-400 text-base;
+    @apply md:text-[26px];
 }
 
 .containerTop > h4 {
-    @apply text-[68px] text-[#242E49] font-bold;
+    @apply text-[26px] text-[#242E49] font-bold text-center;
+    @apply md:text-[42px];
+    @apply lg:text-[68px];
 }
 
 .containerBottom {
-    @apply flex flex-col justify-center items-center;
-    @apply xl:gap-32;
+    @apply flex flex-col justify-center items-center px-4 gap-[80px] h-full;
+    @apply md:px-8 md:gap-[80px];
+    @apply lg:gap-32;
 }
 
 .feature {
-    @apply flex flex-row justify-center items-center;
-    @apply xl:gap-32;
+    @apply flex flex-col justify-center items-center h-full gap-6;
+    @apply md:flex-row;
+    @apply lg:gap-32;
 }
 
 .featureImage {
-    @apply w-[500px] aspect-square overflow-clip rounded-3xl shrink-0;
+    @apply w-[317px] h-[285px] overflow-clip rounded-3xl shrink-0;
+    @apply md:!h-full md:min-h-full;
+    @apply lg:w-[500px] lg:aspect-square;
 }
 
 .featureImage > img {
-    @apply h-full w-full object-center object-cover;
+    @apply !h-full !w-full min-h-full object-center object-cover;
 }
 
 .featureContent {
-    @apply flex flex-col justify-start items-start gap-4;
+    @apply flex flex-col justify-start items-start gap-4 h-full px-4;
+    @apply md:px-0;
 }
 
 .featureContent > h5 {
-    @apply text-primary-700 font-bold text-[42px] mt-6;
+    @apply text-primary-700 font-bold text-[26px];
+    @apply md:text-[26px];
+    @apply lg:text-[42px] lg:mt-6;
 }
 
 .featureContent > p {
@@ -73,11 +82,14 @@
 }
 
 .featureStat > h5 {
-    @apply text-primary-700 text-[42px] font-bold;
+    @apply text-primary-700 text-[26px] font-bold;
+    @apply md:text-[26px];
+    @apply lg:text-[42px];
 }
 
 .featureStat > p {
-    @apply text-primary-700 text-base font-bold;
+    @apply text-primary-700 text-[10px] font-bold;
+    @apply lg:text-base;
 }
 
 .button {

@@ -1,24 +1,36 @@
 .footer {
-    @apply relative overflow-clip bg-tertiary-700 z-40;
-    @apply xl:pt-16;
+    @apply relative overflow-clip bg-tertiary-700 z-40 pt-10;
+    @apply md:pt-[80px];
+    @apply lg:pt-16;
 }
 
 .curve {
     @apply absolute -z-10 h-[1300px] w-[1100px] rounded-[400px] border-[170px] border-[#3f3f3f] -left-[400px] top-4;
+    @apply md:w-[1100px] md:h-[1300px] md:border-[200px] md:-left-[500px] md:top-4;
+    @apply lg:w-[1100px] lg:h-[1300px] lg:border-[170px] lg:-left-[400px] lg:top-4;
 }
 
 .footerContents {
-    @apply flex flex-row justify-between items-start;
-    @apply xl:px-16 xl:pb-8;
+    @apply flex flex-row justify-between items-start pb-10 px-4;
+    @apply md:px-8 md:pb-[80px];
+    @apply lg:px-16 lg:pb-8;
 }
 
 .footerContent {
-    @apply flex justify-start items-center bg-white h-[90px] w-[324px];
+    @apply flex flex-col gap-4;
+}
+
+.mengu {
+    @apply flex flex-col gap-20 justify-center items-center bg-white h-[60px] w-[145px];
+    @apply md:w-[234px] md:h-16;
+    @apply lg:w-[324px] lg:h-[90px];
     border-radius: 0% 26% 42% 0% / 29% 1% 99% 28%;
 }
 
 .menguIcon {
-    @apply w-[211px] h-[59px] mr-20;
+    @apply w-[101px] h-[29px];
+    @apply md:w-[132px] md:h-[37px] md:mr-20;
+    @apply lg:w-[211px] lg:h-[59px] lg:mr-20;
 }
 
 .footerContent1 {
@@ -26,11 +38,13 @@
 }
 
 .footerContent1 > h6 {
-    @apply text-off-white-100 border-b-[3px] border-b-primary-300 pb-2 text-[26px] font-bold mb-1;
+    @apply text-off-white-100 border-b-[3px] border-b-primary-300 pb-2 text-[10px] font-bold mb-1;
+    @apply md:text-[26px];
 }
 
 .footerLink {
-    @apply text-off-white-100 text-base font-normal hover:font-bold;
+    @apply text-off-white-100 text-[10px] font-normal hover:font-bold;
+    @apply md:text-base;
 }
 
 .socials {
@@ -42,17 +56,22 @@
 }
 
 .footerFoot {
-    @apply bg-off-white-100 border-b-[20px] border-b-primary-300 flex flex-row justify-between items-center px-16;
+    @apply bg-off-white-100 border-b-[20px] border-b-primary-300 flex flex-row justify-between items-center px-4;
+    @apply md:px-8;
+    @apply lg:px-16;
 }
 
 .footerFoot > p {
-    @apply text-[10px] text-secondary-700 font-normal;
+    @apply text-[6px] text-secondary-700 font-normal;
+    @apply md:text-[10px];
 }
 
 .footerButton {
-    @apply w-14 aspect-square flex justify-center items-center bg-primary-300;
+    @apply w-8 aspect-square flex justify-center items-center bg-primary-300;
+    @apply md:w-14;
 }
 
 .topIcon {
-    @apply w-8 h-8 -rotate-90 fill-off-white-100;
+    @apply w-4 h-4 -rotate-90 fill-off-white-100;
+    @apply md:w-8 md:h-8;
 }

@@ -13,4 +13,6 @@ export const Assets = {
     pathology: "/images/pathology.png",
     foreground: "/images/foreground.png",
     background: "/images/background.png",
+    social: "/images/social.png",
+
 }

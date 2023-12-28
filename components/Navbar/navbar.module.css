@@ -12,7 +12,42 @@
 }
 
 .navLinks {
-    @apply ml-auto flex flex-row justify-between items-center gap-[40px];
+    @apply ml-auto hidden flex-row justify-between items-center gap-[40px];
+    @apply xl:flex;
+}
+
+.linkContainer {
+    @apply z-40 flex justify-center items-center h-7 w-7 rounded-sm duration-300 ease-in-out;
+}
+
+.navLinksMd {
+    @apply relative flex h-1 w-8 rounded-md bg-white duration-500 ease-in-out;
+    @apply xl:hidden;
+}
+
+.navLinksMd::after,
+.navLinksMd::before {
+    @apply absolute content-[""] h-1 w-8 bg-white rounded-md duration-500 ease-in-out;
+}
+
+.navLinksMd::after {
+    @apply top-2.5 origin-left;
+}
+
+.navLinksMd::before {
+    @apply bottom-2.5 origin-left;
+}
+
+.activeLinks {
+    @apply bg-transparent;
+}
+
+.activeLinks::after {
+    @apply -rotate-[48deg] h-0.5 bg-primary-700 w-6 ml-1.5;
+}
+
+.activeLinks::before {
+    @apply rotate-[48deg] h-0.5 bg-primary-700 w-6 ml-1.5;
 }
 
 .navLink {
@@ -20,6 +55,38 @@
 }
 
 .donateButton {
-    @apply px-6 py-2 bg-secondary-400 rounded-[30px] text-[26px] text-off-white-100 font-bold;
+    @apply px-6 py-2 hidden bg-secondary-400 rounded-[30px] text-[26px] text-off-white-100 font-bold;
+    @apply xl:flex;
+}
+
+
+.donateButtonMD {
+    @apply px-6 py-2 flex w-full mt-4 text-center bg-secondary-400 justify-center items-center rounded-[30px] text-[26px] text-off-white-100 font-bold;
+    @apply xl:hidden;
+}
+
+.overlayContainer {
+    @apply fixed top-0 h-screen w-screen bg-primary-700/60 backdrop-blur-sm duration-500 ease-in-out
+}
+
+.navLinksContainer {
+    @apply z-50 relative ml-auto w-3/4 rounded-l-3xl bg-primary-300 h-full px-5 pt-[120px];
+    @apply lg:w-1/2 lg:px-[40px];
+}
+
+.navLinksMD {
+    @apply flex flex-col justify-start items-start gap-2
+}
+
+.navLinkMD {
+    @apply text-white text-base font-bold border-b-[2px] border-b-white w-full p-2 pb-4;
+}
+
+.help {
+    @apply absolute aspect-square rounded-full w-[40px] bg-primary-600 flex justify-center items-center bottom-6 left-1/2 -translate-x-1/2;
+}
+
+.helpIcon {
+    @apply w-6 h-6 stroke-white;
 }
 

@@ -1,5 +1,6 @@
 .serviceCard {
-    @apply bg-white rounded-3xl p-6 flex flex-row gap-16 justify-center items-center;
+    @apply bg-white rounded-3xl p-6 flex flex-col gap-6 justify-center items-center;
+    @apply lg:flex-row lg:gap-16;
 }
 
 .serviceContent {
@@ -7,7 +8,7 @@
 }
 
 .serviceBadge {
-    @apply flex justify-center items-center w-16 aspect-square rounded-2xl bg-primary-100;
+    @apply flex justify-center items-center w-16 aspect-square rounded-2xl bg-secondary-100;
 }
 
 .serviceIcon {
@@ -27,7 +28,8 @@
 }
 
 .serviceIconWrap {
-    @apply flex justify-center items-center;
+    @apply flex justify-end items-end w-full;
+    @apply lg:items-center lg:justify-center;
 }
 
 .serviceIcon {

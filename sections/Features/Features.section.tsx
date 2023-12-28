@@ -49,7 +49,7 @@ const Features: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className={styles.feature}>
+          <div className={`${styles.feature} flex-col-reverse md:flex-row`}>
             <div className={styles.featureContent}>
               <div className={styles.featureBadge}>
                 <p>Feature 2</p>

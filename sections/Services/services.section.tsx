@@ -54,11 +54,13 @@ const Services: React.FC = () => {
           {" "}
           Don’t see the above category? <Link href="">Contact Us!</Link>
         </p>
-        <Button
-          text="View All Pathologies"
-          type={ButtonType.SEC}
-          icon={<ChevronIcon className={styles.buttonIcon} />}
-        />
+        <div className={styles.footerButton}>
+          <Button
+            text="View All Pathologies"
+            type={ButtonType.SEC}
+            icon={<ChevronIcon className={styles.buttonIcon} />}
+          />
+        </div>
       </div>
     </section>
   );

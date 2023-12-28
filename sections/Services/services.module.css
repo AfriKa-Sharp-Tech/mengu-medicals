@@ -1,6 +1,6 @@
 .container {
-    @apply flex flex-col justify-center items-center;
-    @apply xl:p-16 xl:gap-[56px];
+    @apply flex flex-col justify-center items-center py-11 gap-14;
+    @apply lg:p-16;
     background: linear-gradient(180deg, rgba(248, 250, 252, 0.00) 0%, rgba(248, 250, 252, 0.95) 33.36%, #F8FAFC 74.09%);
 }   
 
@@ -10,25 +10,30 @@
 }
 
 .containerTop > h6 {
-    @apply font-bold text-secondary-400 text-[26px];
+    @apply font-bold text-secondary-400 text-base;
+    @apply md:text-[26px];
 }
 
 .containerTop > h4 {
-    @apply text-[68px] text-[#242E49] font-bold;
+    @apply text-[26px] text-[#242E49] font-bold text-center;
+    @apply md:text-[42px];
+    @apply lg:text-[68px];
 }
 
 .containerBottom {
-    @apply grid grid-cols-1 gap-4;
-    @apply xl:grid-cols-2 xl:px-[116px];
+    @apply grid grid-cols-1 gap-4 px-4;
+    @apply md:grid-cols-2 md:px-8;
+    @apply lg:grid-cols-2 lg:px-[116px];
 }
-
 
 .userIcon {
     @apply w-6 h-6 stroke-secondary-400;
 }
 
 .footer {
-    @apply flex flex-row justify-between items-center w-full px-[116px];
+    @apply flex flex-col justify-between items-center w-full px-8 gap-4;
+    @apply md:px-8 md:flex-row;
+    @apply lg:px-[116px];
 }
 
 .buttonIcon {
@@ -41,4 +46,9 @@
 
 .footer > p > a {
     @apply text-base font-normal text-secondary-400;
+}
+
+.footerButton {
+    @apply w-full;
+    @apply md:w-fit;
 }

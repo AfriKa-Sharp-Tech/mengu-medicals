@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import styles from "./shared.module.css";
 import NetFlix from "@/components/Icons/Netflix";
@@ -9,6 +9,15 @@ import Google from "@/components/Icons/Google";
 import { Assets } from "@/static/assets/assets";
 
 const Shared: React.FC<Props> = ({ flip = false }) => {
+  const description = `We offerhealthcare professionals access to cutting-edge AI-driven
+  health assessments and data analytics.We offerhealthcare
+  professionals access to cutting-edge AI-driven health assessments
+  and data analytics. We offerhealthcare
+  professionals access to cutting-edge AI-driven health assessments
+  and data analytics.We offerhealthcare professionals access to
+  cutting-edge AI-driven health assessments and data analytics.`;
+  const [fullDesc, setFullDesc] = useState<boolean>(false);
+
   return (
     <section
       id="shared"
@@ -78,13 +87,9 @@ const Shared: React.FC<Props> = ({ flip = false }) => {
         </div>
         <div className={styles.bottom}>
           <p>
-            We offerhealthcare professionals access to cutting-edge AI-driven
-            health assessments and data analytics.We offerhealthcare
-            professionals access to cutting-edge AI-driven health assessments
-            and data analytics.We offerhealthcare professionals access to
-            cutting-edge AI-driven health assessments and data analytics.We
-            offerhealthcare professionals access to cutting-edge AI-driven
-            health assessments and data analytics.
+            {description.substring(0, !fullDesc ? 1500 : 150)}
+            {!fullDesc ? "" : "..."}{" "}
+            <span onClick={() => setFullDesc(!fullDesc)}>Read more</span>
           </p>
         </div>
       </div>

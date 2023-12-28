@@ -34,7 +34,7 @@ const Pathology: React.FC = () => {
           <h6>Learn from others </h6>
           <h4>Common Pathologies</h4>
         </div>
-        <div className="w-fit">
+        <div className="w-full md:w-fit">
           <Button text="View All Pathologies" type={ButtonType.SEC} />
         </div>
       </div>
@@ -46,7 +46,7 @@ const Pathology: React.FC = () => {
           </div>
           <p>
             Successful surgery average based on 70+ patients. All chances are
-            you’ll be healed{" "}
+            you'll be healed{" "}
           </p>
         </div>
         <div className={styles.bottomRight}>

@@ -4,6 +4,7 @@ import styles from "./Testimonial.module.css";
 import { Assets } from "@/static/assets/assets";
 import PhoneIcon from "@/components/Icons/PhoneIcon";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
+import Button, { ButtonType } from "@/components/Button/Button.component";
 
 const Testimonial: React.FC = () => {
   const [active, setActive] = useState<number>(0);
@@ -47,6 +48,7 @@ const Testimonial: React.FC = () => {
                     }`}
                     key={index}
                   >
+                    <span>"</span>
                     <h5>Mr/Mrs Max Dohe</h5>
                     <p>
                       Lörem ipsum slöjböter spefåvis inte proll stuprörspolitik,
@@ -56,18 +58,20 @@ const Testimonial: React.FC = () => {
                 ))}
             </div>
             <div className={styles.carouselControls}>
-              <button
-                className={styles.carouselControl}
-                onClick={() => handlePrev(5)}
-              >
-                <ChevronIcon className={`${styles.controlIcon} rotate-180`} />
-              </button>
-              <button
-                className={styles.carouselControl}
-                onClick={() => handleNext(5)}
-              >
-                <ChevronIcon className={styles.controlIcon} />
-              </button>
+              <div className="flex flex-row gap-2">
+                <button
+                  className={styles.carouselControl}
+                  onClick={() => handlePrev(5)}
+                >
+                  <ChevronIcon className={`${styles.controlIcon} rotate-180`} />
+                </button>
+                <button
+                  className={styles.carouselControl}
+                  onClick={() => handleNext(5)}
+                >
+                  <ChevronIcon className={styles.controlIcon} />
+                </button>
+              </div>
               <div className={styles.indicators}>
                 {Array(5)
                   .fill(0)
@@ -124,6 +128,9 @@ const Testimonial: React.FC = () => {
               <button className={styles.requestButton}>
                 Submit the request
               </button>
+            </div>
+            <div className={styles.buttonWrapper}>
+              <Button text="Submit" type={ButtonType.SEC} />
             </div>
           </div>
         </div>

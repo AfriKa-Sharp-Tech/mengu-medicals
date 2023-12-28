@@ -4,8 +4,69 @@
 }
 
 .containerLeft {
+    @apply flex flex-col justify-center items-start gap-6;
+    @apply xl:w-[39.1%];
+}
 
+.leftSideBar {
+    @apply flex flex-col justify-start items-start rounded-3xl overflow-clip w-full bg-white;
+    @apply xl:pb-8;
+}
 
+.leftSideBar > h6 {
+    @apply bg-primary-300 text-white font-bold text-[26px] w-full;
+    @apply xl:px-6 xl:py-4;
+}
+
+.leftList {
+    @apply flex flex-col gap-6 w-full;
+    @apply xl:px-6 xl:py-4;
+}
+
+.leftItem {
+    @apply w-full flex flex-row items-center justify-between pt-2 pb-4 text-base font-bold text-primary-600 border-b-[2px] border-b-grey-200;
+}
+
+.leftItemIcon {
+    @apply h-6 w-6 fill-primary-600;
+}
+
+.leftSideNews {
+    @apply flex flex-col justify-center items-center bg-secondary-100 rounded-3xl overflow-clip w-full;
+    @apply xl:p-8 xl:gap-4;
+}
+
+.leftSideNews > img {
+    @apply aspect-square object-center object-cover;
+    @apply xl:w-[245px];
+}
+
+.leftSideNews > h6 {
+    @apply text-[#200030] font-bold text-[26px];
+}
+
+.leftSideNews > p {
+    @apply text-[#200030] font-normal text-base -mt-2 text-center;
+}
+
+.leftSideNews > h5 {
+    @apply text-[#306] font-bold text-base;
+}
+
+.leftSideNewsButton {
+    @apply w-full flex flex-col gap-4;
+}
+
+.inputIcon {
+    @apply w-6 h-6 stroke-primary-700;
+}
+
+.caption {
+    @apply w-full flex justify-center items-center mt-8;
+}
+
+.caption > p {
+    @apply text-sm font-normal text-[#200030];
 }
 
 .containerRight {
