@@ -1,33 +1,36 @@
 .container {
-    @apply flex flex-col justify-center items-center;
-    @apply xl:p-16 xl:gap-[56px];
+    @apply flex flex-col justify-center items-center py-6;
+    @apply md:py-10 md:gap-14;
+    @apply lg:p-16;
     background: linear-gradient(180deg, rgba(248, 250, 252, 0.00) 0%, rgba(248, 250, 252, 0.95) 33.36%, #F8FAFC 74.09%);
 }   
 
 .containerTop {
-    @apply flex flex-col justify-center items-center gap-4;
-
+    @apply flex flex-col justify-center items-center gap-4 w-full;
 }
 
 .containerTop > h6 {
-    @apply font-bold text-secondary-400 text-[26px];
+    @apply font-bold text-secondary-400 text-base;
+    @apply lg:text-[26px];
 }
 
 .containerTop > h4 {
-    @apply text-[68px] text-[#242E49] font-bold;
+    @apply text-[26px] text-[#242E49] font-bold;
+    @apply md:text-[42px];
+    @apply lg:text-[68px];
 }
 
-.containerBottom {
+/* .containerBottom {
     @apply grid grid-cols-1 gap-4;
-    @apply xl:grid-cols-2 xl:px-[116px];
-}
+    @apply lg:grid-cols-2 lg:px-[116px];
+} */
 
 .faqTypes {
-    @apply flex flex-row justify-center items-center gap-4
+    @apply flex flex-row w-full justify-start items-center gap-4 overflow-x-auto px-16 pb-6;
 }
 
 .faqType {
-    @apply outline-none w-fit px-4 py-2 rounded-md bg-primary-100 text-primary-700 font-bold text-base duration-300 ease-in-out;
+    @apply outline-none whitespace-nowrap w-fit px-4 py-2 rounded-md bg-primary-100 text-primary-700 font-bold text-base duration-300 ease-in-out;
 }
 
 .faqTypeActive {
@@ -35,8 +38,9 @@
 }
 
 .containerBottom {
-    @apply flex flex-col justify-start items-start;
-    @apply xl:flex-row xl:gap-32;
+    @apply flex flex-col-reverse px-8 justify-start items-start gap-16;
+    @apply md:px-16;
+    @apply lg:flex-row lg:gap-32;
 }
 
 .bottomLeft {
@@ -44,7 +48,9 @@
 }
 
 .bottomLeft > h5 {
-    @apply text-primary-700 font-bold text-[42px];
+    @apply text-primary-700 font-bold text-[26px];
+    @apply md:w-2/3 md:text-[42px];
+    @apply lg:w-full;
 }
 
 .bottomLeft > p {
@@ -60,7 +66,8 @@
 }
 
 .accordion {
-    @apply flex flex-row gap-[10px] overflow-clip max-h-[56px] justify-start items-start rounded-md bg-white p-4 duration-300 ease-in-out;
+    @apply flex flex-row gap-[10px] overflow-clip max-h-[95px] justify-start items-start rounded-md bg-white p-4 duration-300 ease-in-out;
+    /* @apply lg:max-h-[56] */
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
 

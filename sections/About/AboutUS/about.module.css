@@ -1,26 +1,32 @@
 .container {
-    @apply flex flex-col-reverse justify-start items-start bg-off-white-200;
-    @apply xl:flex-row xl:gap-5 xl:px-16 xl:py-14;
+    @apply flex flex-col gap-4 flex-wrap justify-start items-start bg-off-white-200;
+}
+
+.container2 {
+    @apply flex flex-col-reverse px-4 py-8 gap-4 justify-start items-start bg-off-white-200;
+    @apply md:flex-row md:gap-4 md:px-8 md:py-8;
+    @apply lg:gap-5 lg:px-16 lg:py-14;
 }
 
 .containerLeft {
-    @apply flex flex-col justify-center items-start gap-6;
-    @apply xl:w-[39.1%];
+    @apply flex flex-col justify-center items-start gap-6 shrink w-full;
+    @apply md:w-[34.29%];
+    @apply lg:w-[39.1%];
 }
 
 .leftSideBar {
-    @apply flex flex-col justify-start items-start rounded-3xl overflow-clip w-full bg-white;
-    @apply xl:pb-8;
+    @apply flex flex-col justify-start items-start rounded-3xl overflow-clip w-full bg-white pb-6;
+    @apply md:pb-8;
 }
 
 .leftSideBar > h6 {
-    @apply bg-primary-300 text-white font-bold text-[26px] w-full;
-    @apply xl:px-6 xl:py-4;
+    @apply bg-primary-300 text-white font-bold text-[26px] w-full p-4;
+    @apply lg:px-6 lg:py-4;
 }
 
 .leftList {
-    @apply flex flex-col gap-6 w-full;
-    @apply xl:px-6 xl:py-4;
+    @apply flex flex-col gap-6 w-full p-4;
+    @apply lg:px-6 lg:py-4;
 }
 
 .leftItem {
@@ -32,24 +38,38 @@
 }
 
 .leftSideNews {
-    @apply flex flex-col justify-center items-center bg-secondary-100 rounded-3xl overflow-clip w-full;
-    @apply xl:p-8 xl:gap-4;
+    @apply !hidden;
+    @apply lg:!flex;
 }
 
-.leftSideNews > img {
+.leftSideNews2 {
+    @apply !flex !w-full shrink-0;
+    @apply lg:!hidden;
+}
+
+.leftSideNews, 
+.leftSideNews2 {
+    @apply flex-col justify-center items-center bg-secondary-100 rounded-3xl overflow-clip w-full p-8 gap-4;
+}
+
+.leftSideNews > img,
+.leftSideNews2 > img {
     @apply aspect-square object-center object-cover;
-    @apply xl:w-[245px];
+    @apply lg:w-[245px];
 }
 
-.leftSideNews > h6 {
+.leftSideNews > h6,
+.leftSideNews2 > h6 {
     @apply text-[#200030] font-bold text-[26px];
 }
 
-.leftSideNews > p {
+.leftSideNews > p,
+.leftSideNews2 > p {
     @apply text-[#200030] font-normal text-base -mt-2 text-center;
 }
 
-.leftSideNews > h5 {
+.leftSideNews > h5,
+.leftSideNews2 > h5 {
     @apply text-[#306] font-bold text-base;
 }
 
@@ -70,16 +90,21 @@
 }
 
 .containerRight {
-    @apply rounded-3xl bg-white flex flex-col gap-4;
-    @apply xl:px-14 xl:py-8 xl:w-[60.9%];
+    @apply rounded-3xl bg-white flex flex-col gap-4 shrink px-4 py-8 w-full;
+    @apply md:w-[62.9%];
+    @apply lg:px-14 lg:py-8 lg:w-[60.9%];
 }
 
 .containerRight > h5 {
-    @apply text-secondary-400 text-[42px] font-bold;
+    @apply text-secondary-400 text-[26px] font-bold;
+    @apply md:text-[26px];
+    @apply lg:text-[42px];
 }
 
 .containerRight > h6 {
-    @apply text-primary-700 text-[26px] font-normal;
+    @apply text-primary-700 text-base font-normal;
+    @apply md:text-base;
+    @apply lg:text-[26px];
 }
 
 .containerRight > p {
@@ -99,21 +124,25 @@
 }
 
 .firstContainer {
-    @apply absolute z-20 top-1/2 -translate-y-1/2 bg-primary-500 w-fit rounded-3xl flex flex-col justify-start items-start gap-4;
-    @apply xl:px-8 xl:py-6 xl:w-[391px];
+    @apply absolute w-[70%] z-20 top-1/2 gap-2 -translate-y-1/2 px-8 py-6 bg-primary-500 rounded-3xl flex flex-col justify-start items-start;
+    @apply md:w-[65%] md:gap-2;
+    @apply lg:w-[70%] lg:gap-4;
 }
 
 .firstContainer > h6 {
-    @apply text-off-white-100 font-bold text-[26px];
+    @apply text-off-white-100 font-bold text-base;
+    @apply md:text-base;
+    @apply lg:text-[26px];
 }
 
 .firstContainer > p {
-    @apply text-off-white-100 font-normal text-base;
+    @apply text-off-white-100 font-normal text-[10px];
+    @apply md:text-[10px];
+    @apply lg:text-base;
 }
 
 .firstImage {
-    @apply rounded-3xl overflow-clip ml-auto;
-    @apply xl:w-[612px] xl:h-[344px];
+    @apply rounded-3xl overflow-clip ml-auto w-[80%] h-[344px];
 }
 
 .firstImage > img {
@@ -121,13 +150,15 @@
 }
 
 .secondContainer {
-    @apply flex flex-col justify-start items-start;
-    @apply xl:flex-row xl:gap-4;
+    @apply flex flex-row gap-2 justify-start items-start;
+    @apply md:flex-row md:gap-2;
+    @apply lg:flex-row lg:gap-4;
 }
 
 
 .secondImage1 {
-    @apply w-1/4 h-[172px] rounded-3xl overflow-clip;
+    @apply w-1/4 h-[95px] rounded-3xl overflow-clip;
+    @apply lg:h-[172px];
 }
 
 .secondImage1 > img {
@@ -135,20 +166,23 @@
 }
 
 .secondContents {
-    @apply bg-primary-500 rounded-3xl w-1/4 h-[172px];
-    @apply xl:px-4 xl:py-8;
+    @apply bg-primary-500 px-2 py-4 rounded-3xl flex justify-center items-center w-1/4 h-[95px];
+    @apply lg:px-4 lg:py-8 lg:h-[172px];
 }
 
 .secondContents > h6 {
-    @apply text-[26px] font-bold text-off-white-100;
+    @apply text-[10px] font-bold text-off-white-100;
+    @apply lg:text-[26px];
 }
 
 .secondContents > h6 > span {
-    @apply text-[26px] font-bold text-primary-300;
+    @apply text-[10px] font-bold text-primary-300;
+    @apply lg:text-[26px];
 }
 
 .secondImage2 {
-    @apply w-1/2 h-[172px] rounded-3xl overflow-clip;
+    @apply w-1/2 h-[95px] rounded-3xl overflow-clip;
+    @apply lg:h-[172px];
 }
 
 .secondImage2 > img {
@@ -156,18 +190,18 @@
 }
 
 .thirdContainer {
-    @apply flex flex-col justify-start items-start;
-    @apply xl:flex-row xl:gap-4;
+    @apply flex flex-row gap-2 justify-start items-start;
+    @apply lg:flex-row lg:gap-4;
 }
 
 .thirdLeft {
-    @apply flex flex-col gap-4;
-    @apply xl:w-1/2;
+    @apply flex flex-col gap-4 w-1/2;
 }
 
 
 .thirdLeftImage {
-    @apply w-full h-[153.5px] overflow-clip rounded-3xl;
+    @apply w-full h-[102px] overflow-clip rounded-3xl;
+    @apply lg:h-[153.5px];
 }
 
 .thirdLeftImage > img {
@@ -175,21 +209,26 @@
 }
 
 .thirdLeftContent {
-    @apply rounded-3xl bg-primary-100 h-full;
-    @apply xl:px-6 xl:py-8;
+    @apply rounded-3xl bg-primary-100 h-fit flex justify-center items-center p-4;
+    @apply lg:px-6 lg:py-8;
 }
 
 .thirdLeftContent > h6 {
-    @apply font-bold text-[26px] text-primary-700;
+    @apply font-bold text-[10px] text-primary-700;
+    @apply md:text-base;
+    @apply lg:text-[26px];
 }
 
 .thirdLeftContent > h6 > span {
-    @apply font-bold text-[26px] text-secondary-400;
+    @apply font-bold text-[10px] text-secondary-400;
+    @apply md:text-base;
+    @apply lg:text-[26px];
 }
 
 .thirdRight {
-    @apply h-[323px] overflow-clip rounded-3xl;
-    @apply xl:w-1/2;
+    @apply h-[190px] w-1/2 overflow-clip rounded-3xl;
+    @apply md:h-[220px];
+    @apply lg:h-[323px];
 }
 
 .thirdRight > img {

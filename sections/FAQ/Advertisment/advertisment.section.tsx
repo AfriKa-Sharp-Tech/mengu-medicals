@@ -14,9 +14,9 @@ const Advertisment: React.FC = () => {
           <h5>Advertisement</h5>
           <h6>Formwandler Fitness | EMS Training Gummersbach</h6>
           <p>
-            Ihre Profis für gesunde Gelenke und Muskeln. Gratis Probetraining
+            Ihre Profis für gesunde Gelenke <span className="hidden lg:flex">und Muskeln. Gratis Probetraining
             mit echten Experten. Ihre Profis für gesunde Gelenke und Muskeln.
-            Ihre Profis für gesunde Gelenke und Muskeln. Ihre Profis{" "}
+            Ihre Profis für gesunde Gelenke und Muskeln. Ihre Profis</span> 
           </p>
           <div className={styles.button}>
             <Button
