@@ -1,5 +1,7 @@
 import Navbar from "@/components/Navbar/navbar.component";
 import Seo from "@/components/seo/Seo";
+import Address from "@/sections/Contact/Address/address.section";
+import ContactUs from "@/sections/Contact/ContactUs/contact.section";
 import Footer from "@/sections/Footer/footer.section";
 import Header from "@/sections/HomeHeader/Header.section";
 import { UseScrollPosition } from "@/utils/UseScrollPosition";
@@ -21,6 +23,8 @@ const Services: React.FC = (): JSX.Element => {
           title="Contact Us"
           subtitle="Lörem ipsum slöjböter spefåvis inte proll stuprörspolitik, oaktat kontrasat nonade."
         />
+        <ContactUs />
+        <Address />
         <Footer />
       </main>
     </div>

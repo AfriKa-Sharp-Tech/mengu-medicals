@@ -13,7 +13,7 @@ const Service1: React.FC = () => {
     // { value: "two", label: "Chronic condition monitoring" },
   ];
   return (
-    <section id="service1" className={`${styles.container} bg-primary-300/10`}>
+    <section id="service1" className={`${styles.container} bg-primary-100 flex-col-reverse lg:flex-row`}>
       <div className={styles.container1}>
         <h4>Service 1</h4>
         <div>

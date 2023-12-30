@@ -22,7 +22,7 @@
 }
 
 .container1 {
-    @apply relative -mt-[96px] px-4 pt-56 pb-10 object-center object-cover flex flex-col justify-center items-start;
+    @apply relative -mt-[96px] px-4 pt-56 pb-10 object-center object-cover flex flex-col justify-end items-start;
     @apply md:pt-56 md:px-8 md:pb-14;
     @apply lg:py-14 lg:px-16 lg:h-[856px];
 }

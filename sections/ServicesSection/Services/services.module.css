@@ -1,15 +1,18 @@
 .container {
-    @apply flex flex-col justify-center items-center;
-    @apply xl:flex-row xl:gap-[40px] xl:px-16 xl:py-[85px];
+    @apply flex justify-center items-center gap-8 py-10 px-4;
+    @apply md:px-8;
+    @apply lg:flex-row lg:gap-10 lg:px-16 lg:py-[85px];
 }
 
 .container1 {
-    @apply flex flex-col justify-start items-start gap-6;
-    @apply xl:w-1/2;
+    @apply flex flex-col justify-start items-start gap-6 w-full;
+    @apply lg:w-1/2;
 }
 
 .container1 > h4 {
-    @apply text-primary-700 font-bold text-[68px];
+    @apply text-primary-700 font-bold text-[26px];
+    @apply md:text-[42px];
+    @apply lg:text-[68px];
 }
 
 .container1 > div  {
@@ -25,7 +28,8 @@
 }
 
 .button {
-    @apply w-fit mt-8;
+    @apply w-full mt-8;
+    @apply md:w-fit;
 }
 
 .buttonIcon {
@@ -33,13 +37,12 @@
 }
 
 .container2 {
-    @apply flex flex-row gap-4 justify-start items-start;
-    @apply xl:w-1/2;
+    @apply flex flex-row gap-4 justify-start items-start w-full;
+    @apply lg:w-1/2;
 }
 
 .imageContainer {
-    @apply flex flex-col gap-4 justify-start items-start;
-    @apply xl:w-1/2;
+    @apply flex flex-col gap-4 justify-start items-start w-1/2;
 }
 
 .image1 {

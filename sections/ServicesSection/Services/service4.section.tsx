@@ -7,7 +7,7 @@ import { Assets } from "@/static/assets/assets";
 
 const Service4: React.FC = () => {
   return (
-    <section id="service4" className={`${styles.container} bg-white`}>
+    <section id="service4" className={`${styles.container} bg-white flex-col lg:flex-row`}>
       <div className={styles.container2}>
         <div className={styles.imageContainer}>
           <div className={styles.image3}>

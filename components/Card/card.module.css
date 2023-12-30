@@ -3,6 +3,13 @@
     @apply lg:flex-row lg:gap-16;
 }
 
+.addressCard {
+    @apply bg-white rounded-3xl px-10 py-6 flex flex-col gap-6 justify-center items-center;
+    @apply md:flex-row md:gap-16 md:px-4 md:py-6;
+    @apply lg:flex-row lg:gap-16 lg:px-10;
+}
+
+
 .serviceContent {
     @apply flex flex-col justify-start items-start gap-8;
 }
@@ -25,6 +32,14 @@
 
 .serviceDetail > p {
     @apply font-normal text-primary-700 text-base;
+}
+
+.contactDetail {
+    @apply flex w-full flex-col gap-6 py-6 border-y-2 border-y-secondary-700;
+}
+
+.contactDetail > p {
+    @apply font-bold text-base text-secondary-400;
 }
 
 .serviceIconWrap {

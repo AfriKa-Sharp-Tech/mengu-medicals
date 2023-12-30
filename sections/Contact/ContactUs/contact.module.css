@@ -1,0 +1,33 @@
+.container {
+    @apply flex flex-col justify-center items-center px-4 py-6 gap-10 bg-secondary-100;
+    @apply md:px-8 md:py-10 md:gap-10 md:flex-col-reverse;
+    @apply lg:flex-row lg:px-16 lg:py-14 lg:gap-16;
+
+}
+
+.containerLeft {
+    @apply flex flex-col gap-4 w-full;
+    @apply lg:w-1/2;
+}
+
+.containerLeft > p {
+    @apply text-base text-primary-700 font-normal mb-10;
+}
+
+.formgrid {
+    @apply flex justify-center items-center gap-4;
+    @apply lg:flex-row lg:gap-6;
+}
+
+.inputIcon {
+    @apply w-6 h-6 stroke-primary-700;
+}
+
+.containerRight {
+    @apply flex flex-col gap-4 w-full rounded-3xl overflow-clip;
+    @apply lg:w-1/2;
+}
+
+.containerRight > img {
+    @apply w-full h-full object-center object-cover;
+}
