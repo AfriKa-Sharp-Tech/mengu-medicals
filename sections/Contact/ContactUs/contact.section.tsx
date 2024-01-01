@@ -37,7 +37,7 @@ const ContactUs: React.FC = () => {
         <Button text="Submit" type={ButtonType.SEC} />
       </div>
       <div className={styles.containerRight}>
-        <img src={Assets.feature2} alt="ContactImage" />
+        <img src={Assets.contactUs} alt="ContactImage" />
       </div>
     </section>
   );

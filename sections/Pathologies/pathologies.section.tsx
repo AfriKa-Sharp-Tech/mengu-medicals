@@ -9,6 +9,53 @@ import ChevronIcon from "@/components/Icons/ChevronIcon";
 const Pathology: React.FC = () => {
   const [active, setActive] = useState<number>(0);
 
+  const paths = [
+    {
+      img: Assets.path1,
+      title: "Unlocking the Power of Personalized AI Healthcare",
+      date: "Jun 25, 2025",
+      author: "By Akari Mizunashi",
+      badges: [
+        { value: 1, label: "wellness" },
+        { value: 2, label: "AI" },
+        { value: 3, label: "Healthcare" },
+      ],
+    },
+    {
+      img: Assets.path2,
+      title: "The Future of Health: AI-Driven Patient Care",
+      date: "Jun 25, 2025",
+      author: "By Akari Mizunashi",
+      badges: [
+        { value: 1, label: "Disease" },
+        { value: 2, label: "Care" },
+        { value: 3, label: "Patient" },
+      ],
+    },
+    {
+      img: Assets.path3,
+      title: "Navigating Healthcare: Your Guide to Asklepios",
+      date: "Jun 25, 2025",
+      author: "By Akari Mizunashi",
+      badges: [
+        { value: 1, label: "Tutorial" },
+        { value: 2, label: "Guide" },
+        { value: 3, label: "Healthcare" },
+      ],
+    },
+    {
+      img: Assets.path4,
+      title: "The Role of AI in Healthcare",
+      date: "Jun 25, 2025",
+      author: "By Akari Mizunashi",
+      badges: [
+        { value: 1, label: "wellness" },
+        { value: 2, label: "AI" },
+        { value: 3, label: "Healthcare" },
+      ],
+    },
+  ];
+
   const handlePrev = (topOffers: number) => {
     if (active !== 0) {
       return setActive(active - 1);
@@ -51,65 +98,63 @@ const Pathology: React.FC = () => {
         </div>
         <div className={styles.bottomRight}>
           <div className={styles.bottomCards}>
-            {Array(5)
-              .fill(0)
-              .map((_, index: number) => (
-                <div
-                  key={index}
-                  className={`${styles.bottomCard} ${
-                    index < active ? styles.bottomPrev : ""
-                  } ${index === active ? styles.bottomCurrent : ""} ${
-                    index > active ? styles.bottomNext : ""
-                  }`}
-                >
-                  <div className={styles.cardImage}>
-                    <img src={Assets.path1} alt="Pathology" />
-                    <div className={styles.badges}>
-                      <div className={styles.badge}>
-                        <p>wellness {index} {active}</p>
+            {paths.map((path, index: number) => (
+              <div
+                key={index}
+                className={`${styles.bottomCard} ${
+                  index < active ? styles.bottomPrev : ""
+                } ${index === active ? styles.bottomCurrent : ""} ${
+                  index > active ? styles.bottomNext : ""
+                }`}
+              >
+                <div className={styles.cardImage}>
+                  <img src={path.img} alt="Pathology" />
+                  <div className={styles.badges}>
+                    {path.badges.map((badge, index: number) => (
+                      <div key={index + badge.value} className={styles.badge}>
+                        <p>{badge.label}</p>
                       </div>
-                    </div>
-                  </div>
-                  <div className={styles.cardAuthor}>
-                    <p>Jun 25, 2025</p>
-                    <div className={styles.cardDot} />
-                    <p>By Akari Mizunashi</p>
-                  </div>
-                  <h6>Unlocking the Power of Personalized AI Healthcare</h6>
-                  <div className={styles.arrow}>
-                    <ArrowIcon className={styles.arrowIcon} />
+                    ))}
                   </div>
                 </div>
-              ))}
+                <div className={styles.cardAuthor}>
+                  <p>{path.date}</p>
+                  <div className={styles.cardDot} />
+                  <p>{path.author}</p>
+                </div>
+                <h6>{path.title}</h6>
+                <div className={styles.arrow}>
+                  <ArrowIcon className={styles.arrowIcon} />
+                </div>
+              </div>
+            ))}
           </div>
           <div className={styles.carouselControls}>
             <div className={styles.indicators}>
-              {Array(5)
-                .fill(0)
-                .map((_, index: number) => (
+              {paths.map((_, index: number) => (
+                <div
+                  className={styles.controlIndicate}
+                  key={index}
+                  onClick={() => handleIndicate(index)}
+                >
                   <div
-                    className={styles.controlIndicate}
-                    key={index}
-                    onClick={() => handleIndicate(index)}
-                  >
-                    <div
-                      className={`${styles.controlIndicator} ${
-                        index === active ? "bg-primary-500" : ""
-                      }`}
-                    />
-                  </div>
-                ))}
+                    className={`${styles.controlIndicator} ${
+                      index === active ? "bg-primary-500" : ""
+                    }`}
+                  />
+                </div>
+              ))}
             </div>
             <div className={styles.buttonWrapper}>
               <button
                 className={styles.carouselControl}
-                onClick={() => handlePrev(5)}
+                onClick={() => handlePrev(paths.length)}
               >
                 <ChevronIcon className={`${styles.controlIcon} rotate-180`} />
               </button>
               <button
                 className={styles.carouselControl}
-                onClick={() => handleNext(5)}
+                onClick={() => handleNext(paths.length)}
               >
                 <ChevronIcon className={styles.controlIcon} />
               </button>

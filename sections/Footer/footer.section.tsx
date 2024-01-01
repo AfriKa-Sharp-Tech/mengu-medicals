@@ -10,17 +10,17 @@ import ChevronIcon from "@/components/Icons/ChevronIcon";
 
 const Footer: React.FC = () => {
   const navLinks: NavLink[] = [
-    { value: "#", label: "Home" },
-    { value: "#features", label: "About us" },
-    { value: "#how-it-works", label: "Services" },
-    { value: "#about-us", label: "Contact us" },
+    { value: "/", label: "Home" },
+    { value: "/about-us", label: "About us" },
+    { value: "/services", label: "Services" },
+    { value: "/contact-us", label: "Contact us" },
   ];
 
   const navLinks1: NavLink[] = [
     { value: "#", label: "Privacy Policy" },
     { value: "#features", label: "Donate" },
     { value: "#how-it-works", label: "Pathologies" },
-    { value: "#about-us", label: "Mentoring" },
+    { value: "/faq", label: "FAQ" },
   ];
   return (
     <footer id="footer" className={styles.footer}>
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
           <div className={styles.mengu}>
             <MenguIcon className={styles.menguIcon} />
           </div>
-          <div className={`${styles.socials} flex md:!hidden`}>
+          <div className={`${styles.socials} !flex md:!hidden`}>
             <button>
               <LinkedInIcon className={styles.socialIcon} />
             </button>
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
             </Link>
           ))}
         </div>
-        <div className={`${styles.footerContent1} !hidden md:flex`}>
+        <div className={`${styles.footerContent1} !hidden md:!flex`}>
           <h6>Social links</h6>
           <div className={styles.socials}>
             <button>

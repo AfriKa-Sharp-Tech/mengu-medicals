@@ -49,18 +49,18 @@ const Service1: React.FC = () => {
       <div className={styles.container2}>
         <div className={styles.imageContainer}>
           <div className={styles.image1}>
-            <img src={Assets.feature1} alt="Testimage" />
+            <img src={Assets.operate} alt="Testimage" />
           </div>
           <div className={styles.image2}>
-            <img src={Assets.feature2} alt="Testimage" />
+            <img src={Assets.newLife} alt="Testimage" />
           </div>
         </div>
         <div className={styles.imageContainer}>
           <div className={styles.image2}>
-            <img src={Assets.feature1} alt="Testimage" />
+            <img src={Assets.support} alt="Testimage" />
           </div>
           <div className={styles.image1}>
-            <img src={Assets.feature2} alt="Testimage" />
+            <img src={Assets.feature3} alt="Testimage" />
           </div>
         </div>
       </div>

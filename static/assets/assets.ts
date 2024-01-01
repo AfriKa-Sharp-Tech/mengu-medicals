@@ -1,5 +1,6 @@
 export const Assets = {
     happy: "/images/happy.png",
+    happy1: "/images/happy1.png",
     workmom: "/images/workmom.png",
     family: "/images/family.png",
     feature1: "/images/feature1.jpeg",
@@ -13,6 +14,13 @@ export const Assets = {
     pathology: "/images/pathology.png",
     foreground: "/images/foreground.png",
     background: "/images/background.png",
+    support1: "/images/support.png",
     social: "/images/social.png",
-
+    operate: "/images/operate.jpeg",
+    support: "/images/support.jpeg",
+    temperature: "/images/temperature.jpeg",
+    comfort: "/images/comfort.jpeg",
+    contactUs: "/images/contact-us.jpeg",
+    examine: "/images/examine.png",
+    newLife: "/images/new-life.jpeg",
 }

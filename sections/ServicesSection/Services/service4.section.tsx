@@ -7,22 +7,25 @@ import { Assets } from "@/static/assets/assets";
 
 const Service4: React.FC = () => {
   return (
-    <section id="service4" className={`${styles.container} bg-white flex-col lg:flex-row`}>
+    <section
+      id="service4"
+      className={`${styles.container} bg-white flex-col lg:flex-row`}
+    >
       <div className={styles.container2}>
         <div className={styles.imageContainer}>
           <div className={styles.image3}>
-            <img src={Assets.feature1} alt="Testimage" />
+            <img src={Assets.examine} alt="Testimage" loading="lazy" />
           </div>
           <div className={styles.image1}>
-            <img src={Assets.feature2} alt="Testimage" />
+            <img src={Assets.support1} alt="Testimage" loading="lazy" />
           </div>
           <div className={styles.image1}>
-            <img src={Assets.feature2} alt="Testimage" />
+            <img src={Assets.temperature} alt="Testimage" loading="lazy" />
           </div>
         </div>
         <div className={styles.imageContainer}>
           <div className={styles.image4}>
-            <img src={Assets.feature1} alt="Testimage" />
+            <img src={Assets.happy1} alt="Testimage" loading="lazy" />
           </div>
         </div>
       </div>
