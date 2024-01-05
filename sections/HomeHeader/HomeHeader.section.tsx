@@ -3,10 +3,12 @@ import React from "react";
 import styles from "./header.module.css";
 import Button, { ButtonType } from "@/components/Button/Button.component";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
+import { useRouter } from "next/router";
 
 const HomeHeader: React.FC = () => {
+  const router = useRouter();
   return (
-    <section id="home_header" className={styles.container}>
+    <section id="header" className={styles.container}>
       <div className={styles.content}>
         <h3>
           Your <span>child's health</span> is our priority
@@ -21,12 +23,14 @@ const HomeHeader: React.FC = () => {
               text="Speak to an expert"
               type={ButtonType.SEC}
               icon={<ChevronIcon className={styles.buttonIcon} />}
+              onClick={() => router.push("/contact-us")}
             />
           </div>
           <div className={styles.button}>
             <Button
               text="Learn more about us"
               icon={<ChevronIcon className={styles.buttonIcon2} />}
+              onClick={() => router.push("/about-us")}
             />
           </div>
         </div>

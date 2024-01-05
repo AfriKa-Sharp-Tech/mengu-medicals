@@ -9,6 +9,7 @@ const Faqs: React.FC = () => {
     label: string;
   }>({ value: 1, label: "Insurance" });
   const faqTypes: { value: string | number; label: string }[] = [
+    { value: 0, label: "All" },
     { value: 1, label: "Insurance" },
     { value: 2, label: "Prices" },
     { value: 3, label: "Emergency" },
@@ -58,7 +59,7 @@ const Faqs: React.FC = () => {
         "At proin lacus ornare hendrerit libero dictum condimentum venenatis.",
       answer:
         "At proin lacus ornare hendrerit libero dictum condimentum venenatis. At proin lacus ornare hendrerit libero dictum condimentum venenatis.  At proin lacus ornare hendrerit libero dictum condimentum venenatis. At proin lacus ornare hendrerit libero dictum condimentum venenatis. ",
-      type: "Insurance",
+      type: "Prices",
     },
     {
       value: 4,
@@ -66,7 +67,7 @@ const Faqs: React.FC = () => {
         "At proin lacus ornare hendrerit libero dictum condimentum venenatis.",
       answer:
         "At proin lacus ornare hendrerit libero dictum condimentum venenatis. At proin lacus ornare hendrerit libero dictum condimentum venenatis.  At proin lacus ornare hendrerit libero dictum condimentum venenatis. At proin lacus ornare hendrerit libero dictum condimentum venenatis. ",
-      type: "Insurance",
+      type: "Emergency",
     },
     {
       value: 5,
@@ -74,7 +75,7 @@ const Faqs: React.FC = () => {
         "At proin lacus ornare hendrerit libero dictum condimentum venenatis.",
       answer:
         "At proin lacus ornare hendrerit libero dictum condimentum venenatis. At proin lacus ornare hendrerit libero dictum condimentum venenatis.  At proin lacus ornare hendrerit libero dictum condimentum venenatis. At proin lacus ornare hendrerit libero dictum condimentum venenatis. ",
-      type: "Insurance",
+      type: "Family doctor",
     },
     {
       value: 6,
@@ -82,7 +83,7 @@ const Faqs: React.FC = () => {
         "At proin lacus ornare hendrerit libero dictum condimentum venenatis.",
       answer:
         "At proin lacus ornare hendrerit libero dictum condimentum venenatis. At proin lacus ornare hendrerit libero dictum condimentum venenatis.  At proin lacus ornare hendrerit libero dictum condimentum venenatis. At proin lacus ornare hendrerit libero dictum condimentum venenatis. ",
-      type: "Insurance",
+      type: "Feature 1",
     },
     {
       value: 7,
@@ -98,9 +99,34 @@ const Faqs: React.FC = () => {
         "At proin lacus ornare hendrerit libero dictum condimentum venenatis.",
       answer:
         "At proin lacus ornare hendrerit libero dictum condimentum venenatis. At proin lacus ornare hendrerit libero dictum condimentum venenatis.  At proin lacus ornare hendrerit libero dictum condimentum venenatis. At proin lacus ornare hendrerit libero dictum condimentum venenatis. ",
-      type: "Insurance",
+      type: "Prices",
     },
   ];
+  const [filtered, setFiltered] = useState<
+    {
+      value: string | number;
+      question: string;
+      answer: string;
+      type: string;
+    }[]
+  >(faqs);
+
+  const handleFilter = (type: { value: string | number; label: string }) => {
+    let _faqs = [...faqs];
+    if (type.label === "All") {
+      _faqs = [...faqs];
+      return setFiltered(_faqs);
+    }
+    _faqs = faqs.filter(
+      (faq: {
+        value: string | number;
+        question: string;
+        answer: string;
+        type: string;
+      }) => faq.type.toLowerCase() === type.label.toLowerCase()
+    );
+    return setFiltered(_faqs);
+  };
   return (
     <section id="faqs" className={styles.container}>
       <div className={styles.containerTop}>
@@ -115,7 +141,10 @@ const Faqs: React.FC = () => {
                   ? styles.faqTypeActive
                   : ""
               }`}
-              onClick={() => setActive(faqType)}
+              onClick={() => {
+                setActive(faqType);
+                handleFilter(faqType);
+              }}
             >
               {faqType.label}
             </button>
@@ -133,7 +162,7 @@ const Faqs: React.FC = () => {
           </p>
         </div>
         <div className={styles.bottomRight}>
-          {faqs.map((faq, index: number) => (
+          {filtered.map((faq, index: number) => (
             <div
               onClick={() => setFAQ(faq)}
               key={index + faq.value.toString()}

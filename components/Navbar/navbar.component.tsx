@@ -8,7 +8,6 @@ import HelpIcon from "../Icons/HelpIcon";
 
 const Navbar: React.FC<Props> = ({ position = 0 }) => {
   const router = useRouter();
-  console.log(position);
   const [active, setActive] = useState<boolean>(false);
   const navLinks: NavLink[] = [
     { value: "/", label: "Home" },

@@ -7,8 +7,10 @@ import Link from "next/link";
 import LinkedInIcon from "@/components/Icons/LinkedInIcon";
 import FaceBookIcon from "@/components/Icons/FaceBookIcon";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
+import { useRouter } from "next/router";
 
 const Footer: React.FC = () => {
+  const router = useRouter();
   const navLinks: NavLink[] = [
     { value: "/", label: "Home" },
     { value: "/about-us", label: "About us" },
@@ -80,7 +82,7 @@ const Footer: React.FC = () => {
           ©{new Date().getFullYear()} all right reserved to Cabinet Mengu
           medical, Hopital de la Tour, geneva.
         </p>
-        <div className={styles.footerButton}>
+        <div className={styles.footerButton} onClick={() =>router.push("#header")}>
           <ChevronIcon className={styles.topIcon} />
         </div>
       </div>

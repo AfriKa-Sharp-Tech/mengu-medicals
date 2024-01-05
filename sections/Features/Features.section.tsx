@@ -6,8 +6,10 @@ import Button, { ButtonType } from "@/components/Button/Button.component";
 import List from "@/components/List/List.component";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
 import Progress from "@/components/Progress/Progress.component";
+import { useRouter } from "next/router";
 
 const Features: React.FC = () => {
+  const router = useRouter();
   const list: { value: string; label: string }[] = [
     { value: "one", label: "Symptom checker" },
     { value: "two", label: "Health risk assessment" },
@@ -45,6 +47,7 @@ const Features: React.FC = () => {
                   type={ButtonType.SEC}
                   text="View All Pathologies"
                   icon={<ChevronIcon className={styles.buttonIcon} />}
+                  onClick={() => router.push("/services")}
                 />
               </div>
             </div>
@@ -75,6 +78,7 @@ const Features: React.FC = () => {
                   type={ButtonType.SEC}
                   text="Learn More"
                   icon={<ChevronIcon className={styles.buttonIcon} />}
+                  onClick={() => router.push("/services")}
                 />
               </div>
             </div>
@@ -103,6 +107,7 @@ const Features: React.FC = () => {
                   type={ButtonType.SEC}
                   text="Learn More"
                   icon={<ChevronIcon className={styles.buttonIcon} />}
+                  onClick={() => router.push("/services")}
                 />
               </div>
             </div>

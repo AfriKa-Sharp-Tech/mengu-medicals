@@ -4,8 +4,10 @@ import styles from "./services.module.css";
 import Button, { ButtonType } from "@/components/Button/Button.component";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
 import { Assets } from "@/static/assets/assets";
+import { useRouter } from "next/router";
 
 const Service2: React.FC = () => {
+  const router = useRouter();
 
   return (
     <section id="service2" className={`${styles.container} bg-white flex-col lg:flex-row`}>
@@ -51,6 +53,7 @@ const Service2: React.FC = () => {
             type={ButtonType.SEC}
             text="Contact Us"
             icon={<ChevronIcon className={styles.buttonIcon} />}
+            onClick={() => router.push("/contact-us")}
           />
         </div>
       </div>

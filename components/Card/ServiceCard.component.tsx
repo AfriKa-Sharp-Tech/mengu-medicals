@@ -1,10 +1,11 @@
 import React from "react";
 
 import styles from "./card.module.css";
-import UserIcon from "../Icons/UserIcon";
 import ChevronIcon from "../Icons/ChevronIcon";
+import { useRouter } from "next/router";
 
 const ServiceCard: React.FC<Props> = ({ data }) => {
+  const router = useRouter();
   return (
     <div className={styles.serviceCard}>
       <div className={styles.serviceContent}>
@@ -17,7 +18,10 @@ const ServiceCard: React.FC<Props> = ({ data }) => {
           <p>{data.description}</p>
         </div>
       </div>
-      <div className={styles.serviceIconWrap}>
+      <div
+        className={styles.serviceIconWrap}
+        onClick={() => router.push("/services")}
+      >
         <ChevronIcon className={styles.serviceIcon} />
       </div>
     </div>

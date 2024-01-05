@@ -5,6 +5,7 @@ import Button, { ButtonType } from "@/components/Button/Button.component";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
 import List from "@/components/List/List.component";
 import { Assets } from "@/static/assets/assets";
+import { useRouter } from "next/router";
 
 const Service3: React.FC = () => {
   const list: { value: string; label: string }[] = [
@@ -12,6 +13,7 @@ const Service3: React.FC = () => {
     { value: "two", label: "Health risk assessment" },
     // { value: "two", label: "Chronic condition monitoring" },
   ];
+  const router = useRouter()
   return (
     <section id="service3" className={`${styles.container} bg-secondary-100 flex-col-reverse lg:flex-row`}>
       <div className={styles.container1}>
@@ -43,6 +45,7 @@ const Service3: React.FC = () => {
             type={ButtonType.SEC}
             text="Contact Us"
             icon={<ChevronIcon className={styles.buttonIcon} />}
+            onClick={() => router.push("/contact-us")}
           />
         </div>
       </div>

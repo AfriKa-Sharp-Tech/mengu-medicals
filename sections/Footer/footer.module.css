@@ -67,7 +67,7 @@
 }
 
 .footerButton {
-    @apply w-8 aspect-square flex justify-center items-center bg-primary-300;
+    @apply w-8 cursor-pointer aspect-square flex justify-center items-center bg-primary-300;
     @apply md:w-14;
 }
 

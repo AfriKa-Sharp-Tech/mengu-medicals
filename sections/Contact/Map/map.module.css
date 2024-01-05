@@ -1,0 +1,45 @@
+.container {
+    @apply relative flex flex-col px-4 py-6 gap-8 justify-center items-center w-full;
+    @apply md:px-8 md:py-10;
+    @apply lg:px-16 lg:py-14;
+}
+
+.containerContent {
+    @apply absolute hidden flex-col gap-4 top-0 right-0 bg-white rounded-bl-3xl;
+    @apply lg:px-32 lg:py-28 lg:flex;
+}
+
+
+.containerContent2 {
+    @apply relative flex flex-col justify-center items-center gap-4 top-0 right-0 bg-white rounded-bl-3xl;
+    @apply lg:px-32 lg:py-28 lg:flex;
+}
+
+.containerContent::before {
+    @apply absolute content-[""] bg-transparent -bottom-12 right-0 h-12 w-12 rounded-tr-3xl;
+    box-shadow: 1rem -1rem white;
+}
+
+.containerContent::after {
+    @apply absolute content-[""] bg-transparent -top-0 -left-12 h-12 w-12 rounded-tr-3xl;
+    box-shadow: 1rem -1rem white;
+}
+
+.containerContent > h6,
+.containerContent2 > h6 {
+    @apply text-secondary-400 font-bold text-base;
+    @apply md:text-[26px];
+}
+
+.containerContent > h5,
+.containerContent2 > h5 {
+    @apply text-primary-700 font-bold text-[26px] text-center;
+    @apply lg:text-[42px];
+    text-wrap: balance;
+}
+
+.containerMap {
+    @apply relative w-full rounded-3xl overflow-clip h-[512px];
+    @apply md:h-[408px];
+    @apply lg:h-[776px];
+}

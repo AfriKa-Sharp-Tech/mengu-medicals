@@ -1,7 +1,6 @@
 import React from "react";
 
 import styles from "./services.module.css";
-import UserIcon from "@/components/Icons/UserIcon";
 import ServiceCard from "@/components/Card/ServiceCard.component";
 import ProfessionalIcon from "@/components/Icons/ProfessionalIcon";
 import PharmaIcon from "@/components/Icons/PharmaIcon";
@@ -10,8 +9,10 @@ import PatientPlusIcon from "@/components/Icons/PatientPlusIcon";
 import Link from "next/link";
 import Button, { ButtonType } from "@/components/Button/Button.component";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
+import { useRouter } from "next/router";
 
 const Services: React.FC = () => {
+  const router = useRouter();
   const services = [
     {
       title: "Patients",
@@ -51,14 +52,14 @@ const Services: React.FC = () => {
       </div>
       <div className={styles.footer}>
         <p>
-          {" "}
-          Don’t see the above category? <Link href="">Contact Us!</Link>
+          Don't see the above category? <Link href="/contact-us">Contact Us!</Link>
         </p>
         <div className={styles.footerButton}>
           <Button
             text="View All Pathologies"
             type={ButtonType.SEC}
             icon={<ChevronIcon className={styles.buttonIcon} />}
+            onClick={() => router.push("/services")}
           />
         </div>
       </div>

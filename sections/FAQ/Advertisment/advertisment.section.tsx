@@ -5,8 +5,10 @@ import Button, { ButtonType } from "@/components/Button/Button.component";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
 import { Assets } from "@/static/assets/assets";
 import MenguIcon from "@/components/Icons/MenguIcon";
+import { useRouter } from "next/router";
 
 const Advertisment: React.FC = () => {
+  const router = useRouter();
   return (
     <section id="advertisment" className={styles.container}>
       <div className={styles.advert}>
@@ -23,6 +25,7 @@ const Advertisment: React.FC = () => {
               text="Contact us"
               type={ButtonType.SEC}
               icon={<ChevronIcon className={styles.buttonIcon} />}
+              onClick={() => router.push("/contact-us")}
             />
           </div>
         </div>

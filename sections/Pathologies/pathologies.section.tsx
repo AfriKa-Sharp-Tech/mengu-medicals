@@ -5,10 +5,11 @@ import Button, { ButtonType } from "@/components/Button/Button.component";
 import { Assets } from "@/static/assets/assets";
 import ArrowIcon from "@/components/Icons/ArrowIcon";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
+import { useRouter } from "next/router";
 
 const Pathology: React.FC = () => {
   const [active, setActive] = useState<number>(0);
-
+  const router = useRouter();
   const paths = [
     {
       img: Assets.path1,
@@ -82,7 +83,11 @@ const Pathology: React.FC = () => {
           <h4>Common Pathologies</h4>
         </div>
         <div className="w-full md:w-fit">
-          <Button text="View All Pathologies" type={ButtonType.SEC} />
+          <Button
+            text="View All Pathologies"
+            type={ButtonType.SEC}
+            onClick={() => router.push("/services")}
+          />
         </div>
       </div>
       <div className={styles.containerBottom}>
@@ -123,7 +128,10 @@ const Pathology: React.FC = () => {
                   <p>{path.author}</p>
                 </div>
                 <h6>{path.title}</h6>
-                <div className={styles.arrow}>
+                <div
+                  className={styles.arrow}
+                  onClick={() => router.push("/services")}
+                >
                   <ArrowIcon className={styles.arrowIcon} />
                 </div>
               </div>
