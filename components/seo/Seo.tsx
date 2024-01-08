@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
 
-const DOMAIN = "https://www.hallokarla.de";
-const DEFAULT_OG_IMAGE = "https://hallokarla.de/images/home.webp";
+const DOMAIN = "https://mengu-medicals.ch/";
+const DEFAULT_OG_IMAGE = "https://mengu-medicals.ch/images/comfort.jpeg";
 
 type Props = {
   title: string;
