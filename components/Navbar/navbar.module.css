@@ -1,14 +1,19 @@
 .container {
-    @apply sticky top-0 z-50 flex flex-row justify-between items-center pr-16 w-full gap-[40px] duration-500 ease-in-out;
+    @apply sticky top-0 z-50 flex flex-row pr-4 justify-between h-[60px] items-center w-full gap-[40px] duration-500 ease-in-out;
+    @apply md:h-[64px] md:pr-8;
+    @apply lg:h-[96px] lg:pr-16;
 }
 
 .iconContainer {
-    @apply flex justify-center items-center h-[96px] w-[372px] bg-white;
-    border-radius: 0% 26% 42% 0% / 29% 1% 99% 28%;
+    @apply flex justify-center items-center h-[60px] w-auto bg-transparent;
+    @apply md:w-[243px] md:h-[64px];
+    @apply lg:h-[96px] lg:w-[372px];
 }
 
 .menguIcon {
-    @apply w-[211px] h-[59px] mr-20;
+    @apply h-[60px] w-auto;
+    @apply md:w-[243px] md:h-[64px];
+    @apply lg:h-[96px] lg:w-[372px];
 }
 
 .navLinks {

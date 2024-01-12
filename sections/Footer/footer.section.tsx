@@ -1,13 +1,13 @@
 import React from "react";
 
 import styles from "./footer.module.css";
-import MenguIcon from "@/components/Icons/MenguIcon";
 import { NavLink } from "@/components/Navbar/navbar.component";
 import Link from "next/link";
 import LinkedInIcon from "@/components/Icons/LinkedInIcon";
 import FaceBookIcon from "@/components/Icons/FaceBookIcon";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
 import { useRouter } from "next/router";
+import MenguIcon2 from "@/components/Icons/MenguIcon2";
 
 const Footer: React.FC = () => {
   const router = useRouter();
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
       <div className={styles.footerContents}>
         <div className={styles.footerContent}>
           <div className={styles.mengu}>
-            <MenguIcon className={styles.menguIcon} />
+            <MenguIcon2 className={styles.menguIcon} />
           </div>
           <div className={`${styles.socials} !flex md:!hidden`}>
             <button>

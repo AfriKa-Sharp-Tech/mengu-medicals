@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 import styles from "./navbar.module.css";
 import { useRouter } from "next/router";
-import MenguIcon from "../Icons/MenguIcon";
 import Link from "next/link";
 import HelpIcon from "../Icons/HelpIcon";
+import MenguIcon2 from "../Icons/MenguIcon2";
 
 const Navbar: React.FC<Props> = ({ position = 0 }) => {
   const router = useRouter();
@@ -19,12 +19,12 @@ const Navbar: React.FC<Props> = ({ position = 0 }) => {
     <nav
       className={`${styles.container} ${
         position > 600
-          ? "bg-primary-700 shadow-secondary-300 shadow-md drop-shadow-md !fixed"
+          ? "bg-primary-300 shadow-md drop-shadow-md !fixed"
           : ""
       }`}
     >
       <div className={styles.iconContainer}>
-        <MenguIcon className={styles.menguIcon} />
+        <MenguIcon2 className={styles.menguIcon} />
       </div>
       <div className={styles.navLinks}>
         {navLinks.map((navlink: NavLink, index: number) => (

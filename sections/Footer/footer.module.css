@@ -21,16 +21,13 @@
 }
 
 .mengu {
-    @apply flex flex-col gap-20 justify-center items-center bg-white h-[60px] w-[145px];
+    @apply flex flex-col gap-20 justify-center items-center bg-transparent h-[60px] w-[145px];
     @apply md:w-[234px] md:h-16;
     @apply lg:w-[324px] lg:h-[90px];
-    border-radius: 0% 26% 42% 0% / 29% 1% 99% 28%;
 }
 
 .menguIcon {
-    @apply w-[101px] h-[29px];
-    @apply md:w-[132px] md:h-[37px] md:mr-20;
-    @apply lg:w-[211px] lg:h-[59px] lg:mr-20;
+    @apply w-auto h-full;
 }
 
 .footerContent1 {
