@@ -89,7 +89,9 @@ const Shared: React.FC<Props> = ({ flip = false }) => {
           <p>
             {description.substring(0, !fullDesc ? 1500 : 150)}
             {!fullDesc ? "" : "..."}{" "}
-            <span onClick={() => setFullDesc(!fullDesc)}>Read more</span>
+            <span onClick={() => setFullDesc(!fullDesc)}>
+              Read {fullDesc ? "more" : "less"}
+            </span>
           </p>
         </div>
       </div>

@@ -5,6 +5,7 @@ import { Assets } from "@/static/assets/assets";
 import PhoneIcon from "@/components/Icons/PhoneIcon";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
 import Button, { ButtonType } from "@/components/Button/Button.component";
+import QuoteIcon from "@/components/Icons/QuoteIcon";
 
 const Testimonial: React.FC = () => {
   const [active, setActive] = useState<number>(0);
@@ -29,6 +30,30 @@ const Testimonial: React.FC = () => {
 
   return (
     <section id="testimonial" className={styles.container}>
+      <div className={styles.bottomBottom}>
+        <div className={styles.bottomImage}>
+          <img src={Assets.workmom} alt="Work mom" />
+        </div>
+        <div className={styles.bottomContent}>
+          <h6>Request a check up</h6>
+          <h5>
+            With Mengu Medical, Have a Personalized Follow Up Of Your Child
+            Heath Now!{" "}
+          </h5>
+          <div className={styles.request}>
+            <PhoneIcon className={styles.requestIcon} />
+            <input
+              type="text"
+              className={styles.requestInput}
+              placeholder="+41 09090909"
+            />
+            <button className={styles.requestButton}>Submit the request</button>
+          </div>
+          <div className={styles.buttonWrapper}>
+            <Button text="Submit" type={ButtonType.SEC} />
+          </div>
+        </div>
+      </div>
       <div className={styles.containerTop}>
         <h6>They trusted Us</h6>
         <h4>Testimonial</h4>
@@ -48,7 +73,7 @@ const Testimonial: React.FC = () => {
                     }`}
                     key={index}
                   >
-                    <span>"</span>
+                    <span><QuoteIcon className={styles.quoteIcon} /></span>
                     <h5>Mr/Mrs Max Dohe</h5>
                     <p>
                       Lörem ipsum slöjböter spefåvis inte proll stuprörspolitik,
@@ -106,32 +131,6 @@ const Testimonial: React.FC = () => {
                   <img src={Assets.family} alt="" />
                 </div>
               ))}
-          </div>
-        </div>
-        <div className={styles.bottomBottom}>
-          <div className={styles.bottomImage}>
-            <img src={Assets.workmom} alt="Work mom" />
-          </div>
-          <div className={styles.bottomContent}>
-            <h6>Request a check up</h6>
-            <h5>
-              With Mengu Medical, Have a Personalized Follow Up Of Your Child
-              Heath Now!{" "}
-            </h5>
-            <div className={styles.request}>
-              <PhoneIcon className={styles.requestIcon} />
-              <input
-                type="text"
-                className={styles.requestInput}
-                placeholder="+41 09090909"
-              />
-              <button className={styles.requestButton}>
-                Submit the request
-              </button>
-            </div>
-            <div className={styles.buttonWrapper}>
-              <Button text="Submit" type={ButtonType.SEC} />
-            </div>
           </div>
         </div>
       </div>

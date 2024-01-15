@@ -1,12 +1,13 @@
 .container {
-    @apply bg-secondary-100 flex flex-col justify-center items-start py-14 px-4 gap-16;
-    @apply md:px-8;
-    @apply lg:px-16;
+    @apply bg-secondary-100 flex flex-col justify-center items-start py-14 px-4 pl-0 gap-16;
+    @apply md:px-8 md:pr-0;
+    @apply lg:px-16 lg:pr-0;
 }
 
 .containerTop {
     @apply flex flex-col gap-4 justify-between items-end w-full;
-    @apply md:flex-row;
+    @apply md:flex-row md:pr-8;
+    @apply lg:pr-16;
 }
 
 .topContent {
@@ -122,7 +123,8 @@
 
 .carouselControls {
     @apply flex flex-col justify-start items-center gap-8 w-full;
-    @apply md:flex-row
+    @apply md:pr-8;
+    @apply md:pr-16;
 }
 
 .carouselControl {

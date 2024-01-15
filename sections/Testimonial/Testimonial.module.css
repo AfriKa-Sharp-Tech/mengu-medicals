@@ -119,10 +119,11 @@
     @apply flex flex-col justify-start items-start gap-4 duration-500 ease-in-out;
 }
 
-.carouselContent > span {
-    @apply text-primary-500 text-[68px] -mb-16;
-    @apply md:text-[96px] md:-mb-32;
-    @apply md:text-[177px];
+
+.quoteIcon {
+    @apply w-[40px] h-[40px];
+    @apply md:w-[60px] md:h-[60px];
+    @apply lg:w-[80px] lg:h-[80px];
 }
 
 .carouselContent > h5 {
@@ -138,8 +139,8 @@
 
 .carouselControls {
     @apply flex flex-col-reverse justify-end items-end gap-4 w-full;
-    @apply md:w-[266px];
-    @apply lg:flex-row lg:justify-start lg:items-center lg:w-[390px];
+    @apply md:w-[266px] md:gap-6;
+    @apply lg:flex-row lg:justify-start lg:items-center lg:w-[390px] lg:gap-4;
 }
 
 .carouselControl {
@@ -153,7 +154,8 @@
 
 .indicators {
     @apply flex flex-row gap-2 justify-start items-center w-full mr-auto;
-    @apply md:w-[200px] md:ml-4;
+    @apply md:w-[266px] md:ml-2;
+    @apply lg:w-[200px];
 }
 
 .controlIndicate {

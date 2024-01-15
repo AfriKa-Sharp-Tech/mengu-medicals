@@ -5,6 +5,8 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import HelpIcon from "../Icons/HelpIcon";
 import MenguIcon2 from "../Icons/MenguIcon2";
+import HamburderIcon from "../Icons/HamburgerIcon";
+import CloseHamburderIcon from "../Icons/CloseHamburgerIcon";
 
 const Navbar: React.FC<Props> = ({ position = 0 }) => {
   const router = useRouter();
@@ -18,9 +20,7 @@ const Navbar: React.FC<Props> = ({ position = 0 }) => {
   return (
     <nav
       className={`${styles.container} ${
-        position > 600
-          ? "bg-primary-300 shadow-md drop-shadow-md !fixed"
-          : ""
+        position > 600 ? "bg-primary-300 shadow-md drop-shadow-md !fixed" : ""
       }`}
     >
       <div className={styles.iconContainer}>
@@ -38,17 +38,19 @@ const Navbar: React.FC<Props> = ({ position = 0 }) => {
         ))}
       </div>
 
+      <button className={styles.donateButton}>Grant</button>
       <div
         onClick={() => setActive(!active)}
         className={`${styles.linkContainer} ${
-          active ? "bg-white" : "bg-transparent"
+          active ? "bg-transparent" : "bg-transparent"
         }`}
       >
-        <div
-          className={`${styles.navLinksMd} ${active ? styles.activeLinks : ""}`}
-        />
+        {active ? (
+          <CloseHamburderIcon className="" />
+        ) : (
+          <HamburderIcon className="" />
+        )}
       </div>
-      <button className={styles.donateButton}>Grant</button>
       <div
         onClick={() => setActive(!active)}
         className={`${styles.overlayContainer} ${

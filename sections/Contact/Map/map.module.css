@@ -12,7 +12,7 @@
 
 .containerContent2 {
     @apply relative flex flex-col justify-center items-center gap-4 top-0 right-0 bg-white rounded-bl-3xl;
-    @apply lg:px-32 lg:py-28 lg:flex;
+    @apply lg:px-32 lg:py-28 lg:hidden;
 }
 
 .containerContent::before {
@@ -28,13 +28,14 @@
 .containerContent > h6,
 .containerContent2 > h6 {
     @apply text-secondary-400 font-bold text-base;
-    @apply md:text-[26px];
+    @apply lg:text-[26px];
 }
 
 .containerContent > h5,
 .containerContent2 > h5 {
-    @apply text-primary-700 font-bold text-[26px] text-center;
-    @apply lg:text-[42px];
+    @apply text-primary-700 font-bold text-[26px] text-center px-16;
+    @apply md:px-32;
+    @apply lg:text-[42px] lg:px-0;
     text-wrap: balance;
 }
 

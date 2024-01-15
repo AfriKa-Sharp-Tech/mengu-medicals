@@ -7,6 +7,7 @@ import Input from "@/components/Input/input.component";
 import EmailIcon from "@/components/Icons/Email@Icon";
 import PencilIcon from "@/components/Icons/PencilIcon";
 import Button, { ButtonType } from "@/components/Button/Button.component";
+import Textarea from "@/components/Input/Textarea.component copy";
 
 const ContactUs: React.FC = () => {
   return (
@@ -24,7 +25,7 @@ const ContactUs: React.FC = () => {
             icon={<EmailIcon className={styles.inputIcon} />}
           />
         </div>
-        <Input
+        <Textarea
           placeholder="Subject: Write us your question"
           type="text"
           icon={<PencilIcon className={styles.inputIcon} />}

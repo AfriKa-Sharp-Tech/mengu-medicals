@@ -53,13 +53,11 @@
 }
 
 .advertIcon {
-    @apply absolute z-30 top-0 left-1/2 -translate-x-1/2  w-[98px] h-[27px] bg-primary-700 rounded flex justify-center items-center;
+    @apply absolute z-30 top-0 left-1/2 -translate-x-1/2  w-[98px] h-[27px] bg-transparent rounded flex justify-center items-center;
     @apply md:top-[18px] md:right-[30px]  md:w-[164px] md:h-[45px] md:translate-x-0 md:left-auto;
     @apply lg:top-[18px] lg:right-[30px]  lg:w-[243px] lg:h-[91px];
 }
 
 .menguIcon {
-    @apply h-[19px] w-[66px];
-    @apply md:h-[37px] md:w-[132px];
-    @apply lg:h-[59px] lg:w-[211px];
+    @apply h-full w-full object-center object-cover;
 }

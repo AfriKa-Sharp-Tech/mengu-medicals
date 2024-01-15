@@ -23,6 +23,7 @@
 
 .linkContainer {
     @apply z-40 flex justify-center items-center h-7 w-7 rounded-sm duration-300 ease-in-out;
+    @apply lg:hidden;
 }
 
 .navLinksMd {

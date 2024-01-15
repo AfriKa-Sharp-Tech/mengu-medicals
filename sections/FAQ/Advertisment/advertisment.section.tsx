@@ -6,6 +6,7 @@ import ChevronIcon from "@/components/Icons/ChevronIcon";
 import { Assets } from "@/static/assets/assets";
 import MenguIcon from "@/components/Icons/MenguIcon";
 import { useRouter } from "next/router";
+import MenguIcon3 from "@/components/Icons/MenguIcon3";
 
 const Advertisment: React.FC = () => {
   const router = useRouter();
@@ -33,7 +34,7 @@ const Advertisment: React.FC = () => {
           <img src={Assets.feature1} alt="BabyImage" />
         </div>
         <div className={styles.advertIcon}>
-          <MenguIcon className={styles.menguIcon} color="#fff" />
+          <MenguIcon3 className={styles.menguIcon} color="#fff" />
         </div>
       </div>
     </section>

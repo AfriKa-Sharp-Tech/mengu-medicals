@@ -2,6 +2,10 @@
     @apply bg-white w-full px-6 py-4 flex flex-row justify-center items-center gap-2 rounded-lg overflow-clip
 }
 
+.inputContainer2 {
+    @apply bg-white w-full px-6 py-4 flex flex-row justify-center items-start gap-2 rounded-lg overflow-clip
+}
+
 .input {
     @apply w-full text-base font-normal text-primary-700;
 }

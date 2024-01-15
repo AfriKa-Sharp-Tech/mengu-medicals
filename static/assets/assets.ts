@@ -23,4 +23,5 @@ export const Assets = {
     contactUs: "/images/contact-us.jpeg",
     examine: "/images/examine.png",
     newLife: "/images/new-life.jpeg",
+    bgImage: "/images/bgImage.jpeg",
 }
