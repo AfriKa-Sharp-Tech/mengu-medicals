@@ -53,6 +53,96 @@ const Shared: React.FC<Props> = ({ flip = false }) => {
             <YouTube className={styles.rightIcon} />
             <NetFlix className={styles.rightIcon} />
           </div>
+          <div className={styles.rightFollowers}>
+            <StarWars className={styles.rightIcon} />
+            <Google className={styles.rightIcon} />
+            <YouTube className={styles.rightIcon} />
+            <NetFlix className={styles.rightIcon} />
+            <CVS className={styles.rightIcon} />
+            <YouTube className={styles.rightIcon} />
+          </div>
+          <div className={styles.rightFollowers1}>
+            <NetFlix className={styles.rightIcon} />
+            <Google className={styles.rightIcon} />
+            <CVS className={styles.rightIcon} />
+            <YouTube className={styles.rightIcon} />
+            <NetFlix className={styles.rightIcon} />
+          </div>
+          <div className={styles.rightFollowers}>
+            <StarWars className={styles.rightIcon} />
+            <Google className={styles.rightIcon} />
+            <YouTube className={styles.rightIcon} />
+            <NetFlix className={styles.rightIcon} />
+            <CVS className={styles.rightIcon} />
+            <YouTube className={styles.rightIcon} />
+          </div>
+          <div className={styles.rightFollowers1}>
+            <NetFlix className={styles.rightIcon} />
+            <Google className={styles.rightIcon} />
+            <CVS className={styles.rightIcon} />
+            <YouTube className={styles.rightIcon} />
+            <NetFlix className={styles.rightIcon} />
+          </div>
+          <div className={styles.rightFollowers}>
+            <StarWars className={styles.rightIcon} />
+            <Google className={styles.rightIcon} />
+            <YouTube className={styles.rightIcon} />
+            <NetFlix className={styles.rightIcon} />
+            <CVS className={styles.rightIcon} />
+            <YouTube className={styles.rightIcon} />
+          </div>
+          <div className={styles.rightFollowers1}>
+            <NetFlix className={styles.rightIcon} />
+            <Google className={styles.rightIcon} />
+            <CVS className={styles.rightIcon} />
+            <YouTube className={styles.rightIcon} />
+            <NetFlix className={styles.rightIcon} />
+          </div>
+          <div className={styles.rightFollowers}>
+            <StarWars className={styles.rightIcon} />
+            <Google className={styles.rightIcon} />
+            <YouTube className={styles.rightIcon} />
+            <NetFlix className={styles.rightIcon} />
+            <CVS className={styles.rightIcon} />
+            <YouTube className={styles.rightIcon} />
+          </div>
+          <div className={styles.rightFollowers1}>
+            <NetFlix className={styles.rightIcon} />
+            <Google className={styles.rightIcon} />
+            <CVS className={styles.rightIcon} />
+            <YouTube className={styles.rightIcon} />
+            <NetFlix className={styles.rightIcon} />
+          </div>
+          <div className={styles.rightFollowers}>
+            <StarWars className={styles.rightIcon} />
+            <Google className={styles.rightIcon} />
+            <YouTube className={styles.rightIcon} />
+            <NetFlix className={styles.rightIcon} />
+            <CVS className={styles.rightIcon} />
+            <YouTube className={styles.rightIcon} />
+          </div>
+          <div className={styles.rightFollowers1}>
+            <NetFlix className={styles.rightIcon} />
+            <Google className={styles.rightIcon} />
+            <CVS className={styles.rightIcon} />
+            <YouTube className={styles.rightIcon} />
+            <NetFlix className={styles.rightIcon} />
+          </div>
+          <div className={styles.rightFollowers}>
+            <StarWars className={styles.rightIcon} />
+            <Google className={styles.rightIcon} />
+            <YouTube className={styles.rightIcon} />
+            <NetFlix className={styles.rightIcon} />
+            <CVS className={styles.rightIcon} />
+            <YouTube className={styles.rightIcon} />
+          </div>
+          <div className={styles.rightFollowers1}>
+            <NetFlix className={styles.rightIcon} />
+            <Google className={styles.rightIcon} />
+            <CVS className={styles.rightIcon} />
+            <YouTube className={styles.rightIcon} />
+            <NetFlix className={styles.rightIcon} />
+          </div>
         </div>
       </div>
       <div className={styles.bottomWrapper}>

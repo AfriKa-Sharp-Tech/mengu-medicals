@@ -6,7 +6,7 @@
 }   
 
 .containerTop {
-    @apply flex flex-col justify-between items-start gap-12 bg-primary-100 w-full rounded-3xl px-4 py-16 overflow-clip;
+    @apply flex flex-col justify-between items-start gap-12 bg-primary-100 w-full rounded-3xl px-4 py-16 overflow-clip h-[650px];
     @apply md:h-[347px] md:pl-8 md:flex-row md:items-center;
     @apply lg:pl-[72px];
 
@@ -97,4 +97,26 @@
 
 .bottom > p > span {
     @apply text-primary-700 text-base font-bold;
+}
+
+
+
+@media screen and (min-width: 744px) {
+    .rightTop {
+        animation: autoScroll 50s ease-in-out 0s infinite alternate;
+    }
+    
+    .rightTop:hover {
+        animation-play-state: paused;
+    }
+}
+
+
+@keyframes autoScroll {
+    from {
+        transform: translateY(38%);
+    }
+    to {
+        transform: translateY(0%);
+    }
 }
