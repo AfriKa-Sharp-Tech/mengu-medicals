@@ -42,7 +42,7 @@
 }
 
 .rightIcon {
-    @apply h-32 w-32 shrink-0;
+    @apply h-32 w-32 cursor-pointer shrink-0 duration-500 ease-in-out hover:!stroke-[#FFF] hover:!fill-[#1CB3C2];
 }
 
 .bottomWrapper {

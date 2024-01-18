@@ -8,6 +8,7 @@ const Google: React.FC<Props> = ({ className }) => {
       height="128"
       viewBox="0 0 129 128"
       fill="none"
+      className={className}
     >
       <rect x="1" y="0.5" width="127" height="127" rx="11.5" stroke="#1CB3C2" />
       <path
