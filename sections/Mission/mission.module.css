@@ -37,8 +37,15 @@
     @apply relative w-full z-30 h-full;
 }
 
+.fadeOut {
+    @apply absolute -bottom-0 left-0 right-0 w-full h-[150px];
+    @apply md:h-[200px];
+    @apply lg:h-[300px];
+    background: linear-gradient(180deg, rgba(248, 250, 252, 0.00) 0%, rgba(248, 250, 252, 0.95) 33.36%, #FFF 74.09%);
+}
+
 .bottomImage {
-    @apply w-full h-[388px];
+    @apply relative w-full h-[388px];
     @apply md:h-[566px];
     @apply lg:h-[932px];
 }

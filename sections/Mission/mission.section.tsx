@@ -22,6 +22,7 @@ const Mission: React.FC = () => {
       <div className={styles.containerBottom}>
         <div className={styles.bottomImage}>
           <img src={Assets.foreground} alt="Foreground" />
+          <div className={styles.fadeOut} />
         </div>
         <div className={styles.backImage}>
           <img src={Assets.background} alt="Background" />
