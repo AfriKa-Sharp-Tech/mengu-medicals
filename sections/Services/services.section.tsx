@@ -10,40 +10,37 @@ import Link from "next/link";
 import Button, { ButtonType } from "@/components/Button/Button.component";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
 import { useRouter } from "next/router";
+import i18n from "@/redux/i18n";
 
 const Services: React.FC = () => {
   const router = useRouter();
   const services = [
     {
-      title: "Patients",
-      description:
-        "At Asklepios, we empower patients with personalized healthcare solutions, helping them make informed choices.",
+      title: i18n.t('childWithA'),
+      description:i18n.t('theDevastatingNews'),
       icon: <PatientPlusIcon className={styles.userIcon} />,
     },
     {
-      title: "Providers",
-      description:
-        "At Asklepios, we empower patients with personalized healthcare solutions, helping them make informed choices.",
+      title: i18n.t('childWithApp'),
+      description:i18n.t('aSuddenSearing'),
       icon: <ProvidersIcon className={styles.userIcon} />,
     },
     {
-      title: "Professionals",
-      description:
-        "At Asklepios, we empower patients with personalized healthcare solutions, helping them make informed choices.",
+      title: i18n.t('teenagerWith'),
+      description:i18n.t('duringACrucialSoccer'),
       icon: <ProfessionalIcon className={styles.userIcon} />,
     },
     {
-      title: "Pharma",
-      description:
-        "At Asklepios, we empower patients with personalized healthcare solutions, helping them make informed choices.",
+      title: i18n.t('newbornCongenital'),
+      description:i18n.t('aTinyBaby'),
       icon: <PharmaIcon className={styles.userIcon} />,
     },
   ];
   return (
     <section id="services" className={styles.container}>
       <div className={styles.containerTop}>
-        <h6>What we do best</h6>
-        <h4>Who We Serve</h4>
+        <h6>{i18n.t('whatWeDoBest')}</h6>
+        <h4>{i18n.t('whoWeServe')}</h4>
       </div>
       <div className={styles.containerBottom}>
         {services.map((service, index: number) => (
@@ -52,11 +49,11 @@ const Services: React.FC = () => {
       </div>
       <div className={styles.footer}>
         <p>
-          Don't see the above category? <Link href="/contact-us">Contact Us!</Link>
+        {i18n.t('dontSeeThe')} <Link href="/contact-us">{i18n.t('contactUs')}!</Link>
         </p>
         <div className={styles.footerButton}>
           <Button
-            text="View All Pathologies"
+            text={i18n.t('viewAllPathologies')}
             type={ButtonType.SEC}
             icon={<ChevronIcon className={styles.buttonIcon} />}
             onClick={() => router.push("/services")}

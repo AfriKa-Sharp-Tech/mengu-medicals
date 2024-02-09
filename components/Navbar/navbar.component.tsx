@@ -7,15 +7,16 @@ import HelpIcon from "../Icons/HelpIcon";
 import MenguIcon2 from "../Icons/MenguIcon2";
 import HamburderIcon from "../Icons/HamburgerIcon";
 import CloseHamburderIcon from "../Icons/CloseHamburgerIcon";
+import i18n from "@/redux/i18n";
 
 const Navbar: React.FC<Props> = ({ position = 0 }) => {
   const router = useRouter();
   const [active, setActive] = useState<boolean>(false);
   const navLinks: NavLink[] = [
-    { value: "/", label: "Home" },
-    { value: "/about-us", label: "About us" },
-    { value: "/services", label: "Services" },
-    { value: "/contact-us", label: "Contact us" },
+    { value: "/", label: i18n.t('home') },
+    { value: "/about-us", label: i18n.t('aboutUs') },
+    { value: "/services", label: i18n.t('services') },
+    { value: "/contact-us", label: i18n.t('contactUs') },
   ];
   return (
     <nav

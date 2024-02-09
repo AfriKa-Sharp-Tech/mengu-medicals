@@ -7,15 +7,11 @@ import YouTube from "@/components/Icons/YouTube";
 import StarWars from "@/components/Icons/StarWars";
 import Google from "@/components/Icons/Google";
 import { Assets } from "@/static/assets/assets";
+import i18n from "@/redux/i18n";
 
 const Shared: React.FC<Props> = ({ flip = false }) => {
-  const description = `We offerhealthcare professionals access to cutting-edge AI-driven
-  health assessments and data analytics.We offerhealthcare
-  professionals access to cutting-edge AI-driven health assessments
-  and data analytics. We offerhealthcare
-  professionals access to cutting-edge AI-driven health assessments
-  and data analytics.We offerhealthcare professionals access to
-  cutting-edge AI-driven health assessments and data analytics.`;
+  const description1 = i18n.t("nestledWithinGeneva");
+  const description2 = i18n.t("hereWhispersOf");
   const [fullDesc, setFullDesc] = useState<boolean>(false);
 
   return (
@@ -27,8 +23,8 @@ const Shared: React.FC<Props> = ({ flip = false }) => {
     >
       <div className={styles.containerTop}>
         <div className={styles.leftTop}>
-          <h5>Our followers</h5>
-          <h6>Trusted by many</h6>
+          <h5>{i18n.t('ourFollowers')}</h5>
+          <h6>{i18n.t('trustedByMany')}</h6>
         </div>
         <div className={styles.rightTop}>
           <div className={styles.rightFollowers1}>
@@ -149,38 +145,34 @@ const Shared: React.FC<Props> = ({ flip = false }) => {
         <div className={styles.containerBottom}>
           <img src={Assets.staff} alt="Staff" />
           <div className={styles.bottomContent}>
-            <h5>Professionals Surgeron</h5>
+            <h5>{i18n.t('professionalSurgeon')}</h5>
             <div className={styles.bottomContents}>
-              <h6>Professionals</h6>
+              <h6>{i18n.t('expertiseWithAGentle')}</h6>
               <p>
-                We offerhealthcare professionals access to cutting-edge
-                AI-driven health assessments and data analytics.lthcare
-                professionals access to cutting-edge AI-driven health
-                assessments
+              {i18n.t('drMenguWields')}
               </p>
             </div>
             <div className={styles.bottomContents}>
-              <h6>Professionals</h6>
+              <h6>{i18n.t('clearCommunication')}</h6>
               <p>
-                We offerhealthcare professionals access to cutting-edge
-                AI-driven health assessments and data analytics.
+              {i18n.t('ourExpertiseWith')}
               </p>
             </div>
             <div className={styles.bottomContents}>
-              <h6>Professionals</h6>
+              <h6>{i18n.t('personalizedCare')}</h6>
               <p>
-                We offerhealthcare professionals access to cutting-edge
-                AI-driven health assessments and data analytics.
+              {i18n.t('atMenguMedical')}
               </p>
             </div>
           </div>
         </div>
         <div className={styles.bottom}>
-          <p>
-            {description.substring(0, !fullDesc ? 1500 : 150)}
+          <p>{description1}</p>
+          <p className={!fullDesc ? "mt-8" : "mt-0"}>
+            {description2.substring(0, !fullDesc ? 1500 : 0)}
             {!fullDesc ? "" : "..."}{" "}
             <span onClick={() => setFullDesc(!fullDesc)}>
-              Read {fullDesc ? "more" : "less"}
+              {fullDesc ? i18n.t('readMore') : i18n.t('readLess')}
             </span>
           </p>
         </div>

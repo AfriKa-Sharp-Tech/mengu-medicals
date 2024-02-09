@@ -8,21 +8,22 @@ import FaceBookIcon from "@/components/Icons/FaceBookIcon";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
 import { useRouter } from "next/router";
 import MenguIcon2 from "@/components/Icons/MenguIcon2";
+import i18n from "@/redux/i18n";
 
 const Footer: React.FC = () => {
   const router = useRouter();
   const navLinks: NavLink[] = [
-    { value: "/", label: "Home" },
-    { value: "/about-us", label: "About us" },
-    { value: "/services", label: "Services" },
-    { value: "/contact-us", label: "Contact us" },
+    { value: "/", label: i18n.t('home') },
+    { value: "/about-us", label: i18n.t('aboutUs') },
+    { value: "/services", label: i18n.t('services') },
+    { value: "/contact-us", label: i18n.t('contactUs') },
   ];
 
   const navLinks1: NavLink[] = [
-    { value: "#", label: "Privacy Policy" },
-    { value: "#features", label: "Donate" },
-    { value: "#how-it-works", label: "Pathologies" },
-    { value: "/faq", label: "FAQ" },
+    { value: "/faq", label: i18n.t('faq') },
+    { value: "#", label: i18n.t('pathologies') },
+    { value: "#features", label: i18n.t('mentoring') },
+    { value: "#how-it-works", label: i18n.t('privacyPolicy') },
   ];
   return (
     <footer id="footer" className={styles.footer}>
@@ -42,7 +43,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className={styles.footerContent1}>
-          <h6>Quick Links</h6>
+          <h6>{i18n.t('quickLinks')}</h6>
           {navLinks.reverse().map((navlink: NavLink, index: number) => (
             <Link
               key={index + navlink.value}
@@ -54,7 +55,7 @@ const Footer: React.FC = () => {
           ))}
         </div>
         <div className={styles.footerContent1}>
-          <h6>Explore</h6>
+          <h6>{i18n.t('explore')}</h6>
           {navLinks1.reverse().map((navlink: NavLink, index: number) => (
             <Link
               key={index + navlink.value}
@@ -66,7 +67,7 @@ const Footer: React.FC = () => {
           ))}
         </div>
         <div className={`${styles.footerContent1} !hidden md:!flex`}>
-          <h6>Social links</h6>
+          <h6>{i18n.t('socialLinks')}</h6>
           <div className={styles.socials}>
             <button>
               <LinkedInIcon className={styles.socialIcon} />
@@ -79,8 +80,7 @@ const Footer: React.FC = () => {
       </div>
       <div className={styles.footerFoot}>
         <p>
-          ©{new Date().getFullYear()} all right reserved to Cabinet Mengu
-          medical, Hopital de la Tour, geneva.
+          &copy;{new Date().getFullYear()} {i18n.t('allRightsReserved')}
         </p>
         <div className={styles.footerButton} onClick={() =>router.push("#header")}>
           <ChevronIcon className={styles.topIcon} />

@@ -6,6 +6,7 @@ import { Assets } from "@/static/assets/assets";
 import ArrowIcon from "@/components/Icons/ArrowIcon";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
 import { useRouter } from "next/router";
+import i18n from "@/redux/i18n";
 
 const Pathology: React.FC = () => {
   const [active, setActive] = useState<number>(0);
@@ -13,46 +14,44 @@ const Pathology: React.FC = () => {
   const paths = [
     {
       img: Assets.path1,
-      title: "Unlocking the Power of Personalized AI Healthcare",
+      title: i18n.t('respiratoryDistress'),
       date: "Jun 25, 2025",
       author: "By Akari Mizunashi",
       badges: [
-        { value: 1, label: "wellness" },
-        { value: 2, label: "AI" },
-        { value: 3, label: "Healthcare" },
+        { value: 1, label: i18n.t('respiratory')},
+        { value: 2, label: i18n.t('newBorn')},
+        { value: 3, label: i18n.t('healthCare')},
       ],
     },
     {
       img: Assets.path2,
-      title: "The Future of Health: AI-Driven Patient Care",
+      title:i18n.t('childWithaSerious'),
       date: "Jun 25, 2025",
       author: "By Akari Mizunashi",
       badges: [
-        { value: 1, label: "Disease" },
-        { value: 2, label: "Care" },
-        { value: 3, label: "Patient" },
+        { value: 1, label: i18n.t('infection') },
+        { value: 2, label: i18n.t('appendicitis') },
+        { value: 3, label: i18n.t('patient') },
       ],
     },
     {
       img: Assets.path3,
-      title: "Navigating Healthcare: Your Guide to Asklepios",
+      title: i18n.t('GERD'),
       date: "Jun 25, 2025",
       author: "By Akari Mizunashi",
       badges: [
-        { value: 1, label: "Tutorial" },
-        { value: 2, label: "Guide" },
-        { value: 3, label: "Healthcare" },
+        { value: 1, label: i18n.t('reflux')},
+        { value: 2, label: i18n.t('healthCare') },
       ],
     },
     {
       img: Assets.path4,
-      title: "The Role of AI in Healthcare",
+      title: i18n.t('solidTurmors'),
       date: "Jun 25, 2025",
       author: "By Akari Mizunashi",
       badges: [
-        { value: 1, label: "wellness" },
-        { value: 2, label: "AI" },
-        { value: 3, label: "Healthcare" },
+        { value: 1, label:i18n.t('tumors') },
+        { value: 2, label: i18n.t('diagnoses') },
       ],
     },
   ];
@@ -79,12 +78,12 @@ const Pathology: React.FC = () => {
     <section id="pathology" className={styles.container}>
       <div className={styles.containerTop}>
         <div className={styles.topContent}>
-          <h6>Learn from others </h6>
-          <h4>Common Pathologies</h4>
+          <h6>{i18n.t('learnFromOthers')}</h6>
+          <h4>{i18n.t('commonPathologies')}</h4>
         </div>
         <div className="w-full md:w-fit">
           <Button
-            text="View All Pathologies"
+            text={i18n.t('viewAllPathologies')}
             type={ButtonType.SEC}
             onClick={() => router.push("/services")}
           />
@@ -94,11 +93,10 @@ const Pathology: React.FC = () => {
         <div className={styles.bottomLeft}>
           <div className={styles.bottomImage}>
             <img src={Assets.pathology} alt="Pathology" />
-            <p>4,9</p>
+            {/* <p>4,9</p> */}
           </div>
           <p>
-            Successful surgery average based on 70+ patients. All chances are
-            you'll be healed{" "}
+          {i18n.t('successfulSurgeryAvg')}
           </p>
         </div>
         <div className={styles.bottomRight}>

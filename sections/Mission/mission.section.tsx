@@ -2,21 +2,19 @@ import React from "react";
 
 import styles from "./mission.module.css";
 import { Assets } from "@/static/assets/assets";
+import i18n from "@/redux/i18n";
 
 const Mission: React.FC = () => {
   return (
     <section id="mission" className={styles.container}>
       <div className={styles.containerTop}>
-        <h4>Our</h4>
-        <h5>Mission</h5>
+        <h4>{i18n.t('our')}</h4>
+        <h5>{i18n.t('mission')}</h5>
         <h6>
-          Is to help your child heal and grow with gentle, personilized care
+        {i18n.t('isToHelp')}
         </h6>
         <p>
-          We are dedicated to providing the best possible surgical care for your
-          children. Our team of expert are making a difference in the lives of
-          children through exceptional pediatric surgery. We are here for you
-          every step of the way, from diagnosis to recovery.
+        {i18n.t('weAreDedicated')}
         </p>
       </div>
       <div className={styles.containerBottom}>

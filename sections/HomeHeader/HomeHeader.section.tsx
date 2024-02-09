@@ -4,6 +4,7 @@ import styles from "./header.module.css";
 import Button, { ButtonType } from "@/components/Button/Button.component";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
 import { useRouter } from "next/router";
+import i18n from "@/redux/i18n";
 
 const HomeHeader: React.FC = () => {
   const router = useRouter();
@@ -11,16 +12,15 @@ const HomeHeader: React.FC = () => {
     <section id="header" className={styles.container}>
       <div className={styles.content}>
         <h3>
-          Your <span>child's health</span> is our priority
+          {i18n.t('your')} <span>{i18n.t('childHealth')}</span> {i18n.t('isOurPriority')}
         </h3>
         <p>
-          Lörem ipsum slöjböter spefåvis inte proll stuprörspolitik, oaktat
-          kontrasat nonade. att apiniras. Vanat bektig.
+          {i18n.t('whenTinyHands')}
         </p>
         <div className={styles.buttonWrapper}>
           <div className={styles.button}>
             <Button
-              text="Speak to an expert"
+              text={i18n.t('speakToAnExpert')}
               type={ButtonType.SEC}
               icon={<ChevronIcon className={styles.buttonIcon} />}
               onClick={() => router.push("/contact-us")}
@@ -28,7 +28,7 @@ const HomeHeader: React.FC = () => {
           </div>
           <div className={styles.button}>
             <Button
-              text="Learn more about us"
+              text={i18n.t('learnMoreAbout')}
               icon={<ChevronIcon className={styles.buttonIcon2} />}
               onClick={() => router.push("/about-us")}
             />

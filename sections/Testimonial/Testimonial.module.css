@@ -100,7 +100,7 @@
 }
 
 .carouselContents1 {
-    @apply relative overflow-clip bg-primary-300 h-full w-full rounded-3xl flex flex-row justify-start items-end gap-8;
+    @apply relative overflow-clip bg-primary-300 h-full w-full flex flex-row justify-start items-end gap-8;
 }
 
 .prevContent {

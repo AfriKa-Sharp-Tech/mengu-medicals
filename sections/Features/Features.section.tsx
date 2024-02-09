@@ -7,35 +7,34 @@ import List from "@/components/List/List.component";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
 import Progress from "@/components/Progress/Progress.component";
 import { useRouter } from "next/router";
+import i18n from "@/redux/i18n";
 
 const Features: React.FC = () => {
   const router = useRouter();
   const list: { value: string; label: string }[] = [
-    { value: "one", label: "Symptom checker" },
-    { value: "two", label: "Health risk assessment" },
-    { value: "two", label: "Chronic condition monitoring" },
+    { value: "one", label: i18n.t('generalSurgery') },
+    { value: "two", label: i18n.t('viceralSurgery') },
+    { value: "two", label: i18n.t('urologicalPlevicSurgery') },
   ];
   return (
     <section id="features" className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.containerTop}>
-          <h6>What we do best</h6>
-          <h4>Our Core Features</h4>
+          <h6>{i18n.t('whatWeDoBest')}</h6>
+          <h4>{i18n.t('ourCoreFeatures')}</h4>
         </div>
         <div className={styles.containerBottom}>
           <div className={styles.feature}>
             <div className={styles.featureImage}>
-              <img src={Assets.feature1} alt="Feature One" />
+              <img src={Assets.feature2} alt="Feature One" />
             </div>
             <div className={styles.featureContent}>
               <div className={styles.featureBadge}>
-                <p>Feature I</p>
+                <p>{i18n.t('consultation')}</p>
               </div>
-              <h5>Predictive Health & Anomaly Detection</h5>
+              <h5>{i18n.t('consultationAndPediatric')}</h5>
               <p>
-                We provide multiple AI Health analytics system for to ensure
-                patient health is our priority. Here's a few health metrics that
-                we measure.
+              {i18n.t('pediatricSurgeryFocuses')}
               </p>
               <div className={styles.featureList}>
                 {list.map((item, index: number) => (
@@ -45,7 +44,7 @@ const Features: React.FC = () => {
               <div className={styles.button}>
                 <Button
                   type={ButtonType.SEC}
-                  text="View All Pathologies"
+                  text={i18n.t('viewAllPathologies')}
                   icon={<ChevronIcon className={styles.buttonIcon} />}
                   onClick={() => router.push("/services")}
                 />
@@ -55,15 +54,13 @@ const Features: React.FC = () => {
           <div className={`${styles.feature} flex-col-reverse md:flex-row`}>
             <div className={styles.featureContent}>
               <div className={styles.featureBadge}>
-                <p>Feature 2</p>
+                <p>{i18n.t('counselling')}</p>
               </div>
-              <h5>Wellness AI Chatbot</h5>
+              <h5>{i18n.t('antenatalConsultations')}</h5>
               <p>
-                Say goodbye to healthcare 2.0 because we have wellness AI
-                Chatbot technology at your fingertips. Experience it today, for
-                free.
+              {i18n.t('receivingNewsOfAPotential')}
               </p>
-              <div className={styles.featureStats}>
+              {/* <div className={styles.featureStats}>
                 <div className={styles.featureStat}>
                   <h5>3M+</h5>
                   <p>Response speed</p>
@@ -72,18 +69,18 @@ const Features: React.FC = () => {
                   <h5>176+</h5>
                   <p>Patient Reviews</p>
                 </div>
-              </div>
+              </div> */}
               <div className={styles.button}>
                 <Button
                   type={ButtonType.SEC}
-                  text="Learn More"
+                  text={i18n.t('learnMore')}
                   icon={<ChevronIcon className={styles.buttonIcon} />}
                   onClick={() => router.push("/services")}
                 />
               </div>
             </div>
             <div className={styles.featureImage}>
-              <img src={Assets.feature2} alt="Feature two" />
+              <img src={Assets.feature1} alt="Feature two" />
             </div>
           </div>
           <div className={styles.feature}>
@@ -92,20 +89,19 @@ const Features: React.FC = () => {
             </div>
             <div className={styles.featureContent}>
               <div className={styles.featureBadge}>
-                <p>Feature 3</p>
+                <p>{i18n.t('emergencySurgery')}</p>
               </div>
-              <h5>AI Health Analytics</h5>
+              <h5>{i18n.t('managementOfEmergency')}</h5>
               <p>
-                Our anomaly detection technology detects any abnormalities from
-                your health, backed with asklepios AI technology.
+              {i18n.t('whenAChildFacesA')}
               </p>
-              <div className={styles.featureList}>
+              {/* <div className={styles.featureList}>
                 <Progress progress={{ value: 94.487, label: "Accuracy" }} />
-              </div>
+              </div> */}
               <div className={styles.button}>
                 <Button
                   type={ButtonType.SEC}
-                  text="Learn More"
+                  text={i18n.t('learnMore')}
                   icon={<ChevronIcon className={styles.buttonIcon} />}
                   onClick={() => router.push("/services")}
                 />
