@@ -8,29 +8,38 @@ import Button, { ButtonType } from "@/components/Button/Button.component";
 import Input from "@/components/Input/input.component";
 import UserIcon from "@/components/Icons/UserIcon";
 import EmailIcon from "@/components/Icons/Email@Icon";
+import i18n from "@/redux/i18n";
+import Link from "next/link";
 
 const About: React.FC = () => {
   const list: { value: string; label: string }[] = [
-    { value: "one", label: "Symptom checker" },
-    { value: "two", label: "Health risk assessment" },
-    { value: "two", label: "Chronic condition monitoring" },
+    { value: "one", label: i18n.t("generalSurgery") },
+    { value: "two", label: i18n.t("viceralSurgery") },
+    { value: "two", label: i18n.t("urologicalPlevicSurgery") },
   ];
+
+  const list2: { value: string; label: string }[] = [
+    { value: "one", label: i18n.t("consultationsAndSurgical") },
+    { value: "two", label: i18n.t("antenatalConsultationsAnd") },
+    { value: "two", label: i18n.t("managementOfChildren") },
+  ];
+
   const leftList: { value: string; label: string }[] = [
-    { value: "one", label: "Mentoring" },
-    { value: "two", label: "Emergency" },
-    { value: "three", label: "Insurances" },
-    { value: "four", label: "Pathologuy 1" },
-    { value: "five", label: "Pathologuy 2" },
-    { value: "six", label: "Pathologuy 3" },
-    { value: "seven", label: "Pathologuy 4" },
-    { value: "eight", label: "Privacy and Policy" },
+    { value: "one", label: i18n.t("mentoring") },
+    { value: "two", label: i18n.t("emergency") },
+    { value: "three", label: i18n.t("insurances") },
+    { value: "four", label: `${i18n.t("pathology")} 1` },
+    { value: "five", label: `${i18n.t("pathology")} 2` },
+    { value: "six", label: `${i18n.t("pathology")} 3` },
+    { value: "seven", label: `${i18n.t("pathology")} 4` },
+    { value: "eight", label: i18n.t("privacyPolicy") },
   ];
   return (
     <section id="about-us" className={styles.container}>
       <div className={styles.container2}>
         <div className={styles.containerLeft}>
           <div className={styles.leftSideBar}>
-            <h6>About Us</h6>
+            <h6>{i18n.t("aboutUs")}</h6>
             <div className={styles.leftList}>
               {leftList.map((item, index: number) => (
                 <button key={index + item.value} className={styles.leftItem}>
@@ -42,7 +51,7 @@ const About: React.FC = () => {
 
           <div className={styles.leftSideNews}>
             <img src={Assets.social} alt="TESTImage" />
-            <h6>Newsletter registration</h6>
+            <h6>{i18n.t("newsletterReg")}</h6>
             <p>
               Bleiben Sie mit unseren sorgfältig kuratierten und neuesten
               Nachrichten auf dem Laufenden, um den Ruhestand einfacher zu
@@ -51,7 +60,7 @@ const About: React.FC = () => {
             <h5>Geben Sie Ihren Namen und E-Mail Adresse ein.</h5>
             <div className={styles.leftSideNewsButton}>
               <Input
-                placeholder="Name Smith"
+                placeholder={i18n.t("nameSmith")}
                 type="text"
                 icon={<UserIcon className={styles.inputIcon} />}
               />
@@ -62,49 +71,48 @@ const About: React.FC = () => {
               />
             </div>
             <div className={styles.leftSideNewsButton}>
-              <Button text="Submit" type={ButtonType.SEC} />
+              <Button text={i18n.t("submit")} type={ButtonType.SEC} />
             </div>
             <div className={styles.caption}>
-              <p>Terms and Condition</p>
+              <p>{i18n.t("termsAndCondition")}</p>
             </div>
           </div>
         </div>
         <div className={styles.containerRight}>
-          <h5>About Us</h5>
-          <h6>Predictive Health & Anomaly Detection</h6>
-          <p className={styles.p1}>
-            We provide multiple AI Health analytics system for to ensure patient
-            health is our priority. Here's a few health metrics that we measure.
-            We provide multiple AI Health analytics system for to ensure patient
-            health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority.{" "}
+          <h5>{i18n.t("aboutUs")}</h5>
+          <h6>{i18n.t("predictiveSurgeon")}</h6>
+          <p className={styles.p1}>{i18n.t("imagineAPlaceWhere")}</p>
+          <p className={[styles.p1, "mt-6"].join(" ")}>
+            {i18n.t("ourExpertiseExtendsFar")}
           </p>
           <div className={styles.firstImageContainer}>
             <div className={styles.firstContainer}>
-              <h6>Predictive Health & Anomaly Detection</h6>
-              <p>Predictive Health & Anomaly Detection</p>
+              <h6>{i18n.t("predictiveHealth")}</h6>
+              <p>{i18n.t("predictiveHealth")}</p>
             </div>
             <div className={styles.firstImage}>
               <img src={Assets.happy} alt="TestImage" />
             </div>
           </div>
           <p className={styles.p2}>
-            We provide multiple AI Health analytics system for to ensure patient
-            health is our priority. Here's a few health metrics that we measure.
-            We provide multiple AI Health analytics system for to ensure patient
-            health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority.
+            {i18n.t("hereWhatMake")}
+            <ul>
+              <li>
+                {i18n.t("drMengu")} <br />
+                {i18n.t("drMenguMore")}
+              </li>
+              <li>
+                {i18n.t("personalizedCare")} <br />
+                {i18n.t("personalizedCareMore")}
+              </li>
+            </ul>
           </p>
           <div className={styles.secondContainer}>
             <div className={styles.secondImage1}>
               <img src={Assets.feature2} alt="SecondImage1" />
             </div>
             <div className={styles.secondContents}>
-              <h6>
-                Predictive <span>Personal</span> Health care
-              </h6>
+              <h6>{i18n.t("personalizedCompassion")}</h6>
             </div>
             <div className={styles.secondImage2}>
               <img src={Assets.feature2} alt="SecondImage1" />
@@ -117,7 +125,9 @@ const About: React.FC = () => {
               </div>
               <div className={styles.thirdLeftContent}>
                 <h6>
-                  Predictive <span>Health & Anomaly Detection</span> Predictive{" "}
+                  {i18n.t("predictive")} <span>{i18n.t("healthAnomaly")}</span>{" "}
+                  {i18n.t("personalized")}{" "}
+                  <span>{i18n.t("pediatricSurgery")}</span>
                 </h6>
               </div>
             </div>
@@ -125,79 +135,28 @@ const About: React.FC = () => {
               <img src={Assets.feature2} alt="ThirdRightImage" />
             </div>
           </div>
-          <p className={styles.p1}>
-            We provide multiple AI Health analytics system for to ensure patient
-            health is our priority. Here's a few health metrics that we measure.
-            We provide multiple AI Health analytics system for to ensure patient
-            health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority. Here's a few health metrics that we
-            measure.
-          </p>
+          <p className={styles.p1}>{i18n.t("hereFearFinds")}</p>
           <div className={styles.lastImage}>
             <img src={Assets.feature2} alt="LastImage" />
           </div>
-          <p className={styles.p1}>
-            We provide multiple AI Health analytics system for to ensure patient
-            health is our priority. Here's a few health metrics that we measure.
-            We provide multiple AI Health analytics system for to ensure patient
-            health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority. Here's a few health metrics that we
-            measure.
-          </p>
+          <p className={styles.p1}>{i18n.t("chooseMenguMedical")}</p>
           <div className={styles.list}>
             <div className={styles.list}>
-              {list.map((item, index: number) => (
+              {list2.map((item, index: number) => (
                 <List key={index + item.value} item={item} />
               ))}
             </div>
           </div>
           <p className={styles.p1}>
-            We provide multiple AI Health analytics system for to ensure patient
-            health is our priority. Here's a few health metrics that we measure.
-            We provide multiple AI Health analytics system for to ensure patient
-            health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority. Here's a few health metrics that we
-            measure.We provide multiple AI Health analytics system for to ensure
-            patient health is our priority. Here's a few health metrics that we
-            measure.
+            {i18n.t("scheduleA")} <Link href={"/#"}>{i18n.t("consultation")}</Link>
+             {" "}{i18n.t("todayAndEmbark")}
           </p>
         </div>
       </div>
       <div className={styles.container2}>
         <div className={styles.leftSideNews2}>
           <img src={Assets.social} alt="TESTImage" />
-          <h6>Newsletter registration</h6>
+          <h6>{i18n.t("newsletterReg")}</h6>
           <p>
             Bleiben Sie mit unseren sorgfältig kuratierten und neuesten
             Nachrichten auf dem Laufenden, um den Ruhestand einfacher zu
@@ -206,7 +165,7 @@ const About: React.FC = () => {
           <h5>Geben Sie Ihren Namen und E-Mail Adresse ein.</h5>
           <div className={styles.leftSideNewsButton}>
             <Input
-              placeholder="Name Smith"
+              placeholder={i18n.t("nameSmith")}
               type="text"
               icon={<UserIcon className={styles.inputIcon} />}
             />
@@ -217,10 +176,10 @@ const About: React.FC = () => {
             />
           </div>
           <div className={styles.leftSideNewsButton}>
-            <Button text="Submit" type={ButtonType.SEC} />
+            <Button text={i18n.t("submit")} type={ButtonType.SEC} />
           </div>
           <div className={styles.caption}>
-            <p>Terms and Condition</p>
+            <p>{i18n.t("termsAndCondition")}</p>
           </div>
         </div>
       </div>
