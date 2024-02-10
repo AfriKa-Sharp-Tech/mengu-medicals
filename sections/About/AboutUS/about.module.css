@@ -102,8 +102,7 @@
 }
 
 .containerRight > h6 {
-    @apply text-primary-700 text-base font-normal;
-    @apply md:text-base;
+    @apply text-primary-700 text-[26px] font-normal;
     @apply lg:text-[26px];
 }
 
@@ -115,8 +114,20 @@
     @apply !text-primary-700;
 }
 
+.p1 > a {
+    @apply text-secondary-400 underline;
+}
+
 .p2 {
     @apply !text-[#5D6A85]
+}
+
+.listStyle {
+    @apply pl-8 text-base text-black flex flex-col gap-2;
+}
+
+.listStyle > li {
+ @apply list-disc
 }
 
 .firstImageContainer {

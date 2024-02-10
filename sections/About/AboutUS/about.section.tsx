@@ -12,12 +12,6 @@ import i18n from "@/redux/i18n";
 import Link from "next/link";
 
 const About: React.FC = () => {
-  const list: { value: string; label: string }[] = [
-    { value: "one", label: i18n.t("generalSurgery") },
-    { value: "two", label: i18n.t("viceralSurgery") },
-    { value: "two", label: i18n.t("urologicalPlevicSurgery") },
-  ];
-
   const list2: { value: string; label: string }[] = [
     { value: "one", label: i18n.t("consultationsAndSurgical") },
     { value: "two", label: i18n.t("antenatalConsultationsAnd") },
@@ -94,9 +88,9 @@ const About: React.FC = () => {
               <img src={Assets.happy} alt="TestImage" />
             </div>
           </div>
-          <p className={styles.p2}>
+          <p className={[styles.p1].join(" ")}>
             {i18n.t("hereWhatMake")}
-            <ul>
+            <ul className={styles.listStyle}>
               <li>
                 {i18n.t("drMengu")} <br />
                 {i18n.t("drMenguMore")}
@@ -148,8 +142,9 @@ const About: React.FC = () => {
             </div>
           </div>
           <p className={styles.p1}>
-            {i18n.t("scheduleA")} <Link href={"/#"}>{i18n.t("consultation")}</Link>
-             {" "}{i18n.t("todayAndEmbark")}
+            {i18n.t("scheduleA")}{" "}
+            <Link href={"/#"}>{i18n.t("consultation")}</Link>{" "}
+            {i18n.t("todayAndEmbark")}
           </p>
         </div>
       </div>

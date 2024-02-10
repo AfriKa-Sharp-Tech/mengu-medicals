@@ -9,19 +9,20 @@ import ProvidersIcon from "@/components/Icons/ProvidersIcon";
 import PhoneIcon from "@/components/Icons/PhoneIcon";
 import AddressCard from "@/components/Card/AddressCard.component";
 import EmergencyIcon from "@/components/Icons/EmergencyIcon";
+import i18n from "@/redux/i18n";
 
 const Address: React.FC = () => {
   const address = [
     {
-      title: "Cabinet Mengu medical",
-      location: "Hopital de la Tour, geneva switzaland Avenue J.- D. Maillard 3CH-1217 Meyrin",
+      title: i18n.t("cabinetMengu"),
+      location: `${i18n.t("hopitalDeLaTour")} ${i18n.t("genevaSwitzaland")} ${i18n.t("3chI2")}`,
       icon: <PhoneIcon className={styles.addressIcon} />,
       contact1: "Support@Mengumedical.com",
       contact2: "+41 22 909 0400.",
     },
     {
       title: "Emergency & Ambulance ",
-      location: "Hopital de la Tour, geneva switzaland Avenue J.- D. Maillard 3CH-1217 Meyrin",
+      location: `${i18n.t("hopitalDeLaTour")} ${i18n.t("genevaSwitzaland")} ${i18n.t("3chI2")}`,
       icon: <EmergencyIcon className={styles.addressIcon} />,
       contact1: "+41 22 964 9400.",
       contact2: "+41 22 909 0400.",
@@ -30,8 +31,8 @@ const Address: React.FC = () => {
   return (
     <section id="address" className={styles.container}>
       <div className={styles.containerLeft}>
-        <h6>Address</h6>
-        <h5>Where to reach Us</h5>
+        <h6>{i18n.t("address")}</h6>
+        <h5>{i18n.t("whereToReach")}</h5>
         <div className={styles.linksIcon}>
           <Link href="#">
             <LinkedInIcon className={styles.linkIcon} />

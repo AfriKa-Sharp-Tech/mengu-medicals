@@ -4,9 +4,9 @@ import styles from "./advertisment.module.css";
 import Button, { ButtonType } from "@/components/Button/Button.component";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
 import { Assets } from "@/static/assets/assets";
-import MenguIcon from "@/components/Icons/MenguIcon";
 import { useRouter } from "next/router";
 import MenguIcon3 from "@/components/Icons/MenguIcon3";
+import i18n from "@/redux/i18n";
 
 const Advertisment: React.FC = () => {
   const router = useRouter();
@@ -14,16 +14,12 @@ const Advertisment: React.FC = () => {
     <section id="advertisment" className={styles.container}>
       <div className={styles.advert}>
         <div className={styles.advertLeft}>
-          <h5>Advertisement</h5>
-          <h6>Formwandler Fitness | EMS Training Gummersbach</h6>
-          <p>
-            Ihre Profis für gesunde Gelenke <span className="hidden lg:flex">und Muskeln. Gratis Probetraining
-            mit echten Experten. Ihre Profis für gesunde Gelenke und Muskeln.
-            Ihre Profis für gesunde Gelenke und Muskeln. Ihre Profis</span> 
-          </p>
+          <h5>{i18n.t("advertisement")}</h5>
+          <h6>{i18n.t("formwandlerFitness")}</h6>
+          <p>{i18n.t("advertisementDescription")}</p>
           <div className={styles.button}>
             <Button
-              text="Contact us"
+              text={i18n.t("contactUs")}
               type={ButtonType.SEC}
               icon={<ChevronIcon className={styles.buttonIcon} />}
               onClick={() => router.push("/contact-us")}

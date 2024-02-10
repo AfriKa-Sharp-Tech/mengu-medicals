@@ -5,12 +5,16 @@ import Button, { ButtonType } from "@/components/Button/Button.component";
 import ChevronIcon from "@/components/Icons/ChevronIcon";
 import { Assets } from "@/static/assets/assets";
 import { useRouter } from "next/router";
+import i18n from "@/redux/i18n";
 
 const Service2: React.FC = () => {
   const router = useRouter();
 
   return (
-    <section id="service2" className={`${styles.container} bg-white flex-col lg:flex-row`}>
+    <section
+      id="service2"
+      className={`${styles.container} bg-white flex-col lg:flex-row`}
+    >
       <div className={styles.container2}>
         <div className={styles.imageContainer}>
           <div className={styles.image4}>
@@ -30,28 +34,16 @@ const Service2: React.FC = () => {
         </div>
       </div>
       <div className={styles.container1}>
-        <h4>Service 2</h4>
+        <h4>{i18n.t("suspectedMalformations")}</h4>
+        <h5>{i18n.t("antenatalConsultation")}</h5>
         <div>
-          <p>
-            Lörem ipsum slöjböter spefåvis inte proll stuprörspolitik, oaktat
-            kontrasat nonade. att apiniras. Vanat bektig.oaktat kontrasat
-            nonade. att apiniras. Vanat bektig.oaktat kontrasat nonade. att
-            apiniras. Vanat bektig. Lörem ipsum slöjböter spefåvis inte proll
-            stuprörspolitik, oaktat kontrasat nonade. att apiniras. Vanat
-            bektig.oaktat kontrasat nonade. att apiniras. Vanat bektig.oaktat
-            kontrasat nonade. att apiniras. Vanat bektig.
-          </p>
-          <p>
-            Lörem ipsum slöjböter spefåvis inte proll stuprörspolitik, oaktat
-            kontrasat nonade. att apiniras. Vanat bektig.oaktat kontrasat
-            nonade. att apiniras. Lörem ipsum slöjböter spefåvis inte proll
-            stuprörspolitik, oaktat kontrasat nonade. att apiniras.
-          </p>
+          <p>{i18n.t("pregnancyShouldBeA")}</p>
+          <p>{i18n.t("forgetGeneric")}</p>
         </div>
         <div className={styles.button}>
           <Button
             type={ButtonType.SEC}
-            text="Contact Us"
+            text={i18n.t("contactUs")}
             icon={<ChevronIcon className={styles.buttonIcon} />}
             onClick={() => router.push("/contact-us")}
           />

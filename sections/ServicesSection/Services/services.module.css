@@ -9,10 +9,15 @@
     @apply lg:w-1/2;
 }
 
-.container1 > h4 {
+.container1 > h5 {
     @apply text-primary-700 font-bold text-[26px];
     @apply md:text-[42px];
     @apply lg:text-[68px];
+}
+
+.container1 > h4 {
+    @apply text-secondary-400 font-bold text-base -mb-6;
+    @apply lg:text-[26px];
 }
 
 .container1 > div  {

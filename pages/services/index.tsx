@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar/navbar.component";
 import Seo from "@/components/seo/Seo";
+import i18n from "@/redux/i18n";
 import Footer from "@/sections/Footer/footer.section";
 import Header from "@/sections/HomeHeader/Header.section";
 import Service1 from "@/sections/ServicesSection/Services/service1.section";
@@ -22,8 +23,8 @@ const Services: React.FC = (): JSX.Element => {
 
       <main className="relative">
         <Navbar position={position} />
-        <Header title="Explore Our Services" />
-        <Shared flip /> 
+        <Header title={i18n.t("exploreOur")} />
+        <Shared flip />
         <Service1 />
         <Service2 />
         <Service3 />

@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar/navbar.component";
 import Seo from "@/components/seo/Seo";
+import i18n from "@/redux/i18n";
 import Advertisment from "@/sections/FAQ/Advertisment/advertisment.section";
 import Faqs from "@/sections/FAQ/FAQs/faqs.section";
 import Footer from "@/sections/Footer/footer.section";
@@ -19,7 +20,7 @@ const Services: React.FC = (): JSX.Element => {
 
       <main className="relative">
         <Navbar position={position} />
-        <Header title="Any Other Question?" />
+        <Header title={i18n.t("anyOtherQuestion")} />
         <Faqs />
         <Advertisment />
         <Footer />

@@ -8,6 +8,7 @@ import EmailIcon from "@/components/Icons/Email@Icon";
 import PencilIcon from "@/components/Icons/PencilIcon";
 import Button, { ButtonType } from "@/components/Button/Button.component";
 import Textarea from "@/components/Input/Textarea.component copy";
+import i18n from "@/redux/i18n";
 
 const ContactUs: React.FC = () => {
   return (
@@ -15,27 +16,25 @@ const ContactUs: React.FC = () => {
       <div className={styles.containerLeft}>
         <div className={styles.formgrid}>
           <Input
-            placeholder="Name"
+            placeholder={i18n.t("name")}
             type="text"
             icon={<UserIcon className={styles.inputIcon} />}
           />
           <Input
-            placeholder="Email"
-            type="Email"
+            placeholder={i18n.t("email")}
+            type="email"
             icon={<EmailIcon className={styles.inputIcon} />}
           />
         </div>
         <Textarea
-          placeholder="Subject: Write us your question"
+          placeholder={i18n.t("subjectWrite")}
           type="text"
           icon={<PencilIcon className={styles.inputIcon} />}
         />
         <p>
-          Lörem ipsum slöjböter spefåvis inte proll stuprörspolitik, oaktat
-          kontrasat nonade. att apiniras. Vanat bektig. Dotism makrod. Vans
-          hurtad
+        {i18n.t("preferToTalk")}
         </p>
-        <Button text="Submit" type={ButtonType.SEC} />
+        <Button text={i18n.t("submit")} type={ButtonType.SEC} />
       </div>
       <div className={styles.containerRight}>
         <img src={Assets.contactUs} alt="ContactImage" />

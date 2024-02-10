@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar/navbar.component";
 import Seo from "@/components/seo/Seo";
+import i18n from "@/redux/i18n";
 import Address from "@/sections/Contact/Address/address.section";
 import ContactUs from "@/sections/Contact/ContactUs/contact.section";
 import MapSection from "@/sections/Contact/Map/Map.section";
@@ -21,8 +22,8 @@ const Services: React.FC = (): JSX.Element => {
       <main className="relative">
         <Navbar position={position} />
         <Header
-          title="Contact Us"
-          subtitle="Lörem ipsum slöjböter spefåvis inte proll stuprörspolitik, oaktat kontrasat nonade."
+          title={i18n.t("contactUs")}
+          subtitle={i18n.t("giveYourChild")}
         />
         <ContactUs />
         <Address />

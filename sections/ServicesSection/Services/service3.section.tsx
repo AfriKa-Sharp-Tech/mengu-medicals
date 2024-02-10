@@ -6,6 +6,7 @@ import ChevronIcon from "@/components/Icons/ChevronIcon";
 import List from "@/components/List/List.component";
 import { Assets } from "@/static/assets/assets";
 import { useRouter } from "next/router";
+import i18n from "@/redux/i18n";
 
 const Service3: React.FC = () => {
   const list: { value: string; label: string }[] = [
@@ -17,22 +18,14 @@ const Service3: React.FC = () => {
   return (
     <section id="service3" className={`${styles.container} bg-secondary-100 flex-col-reverse lg:flex-row`}>
       <div className={styles.container1}>
-        <h4>Service 3</h4>
+        <h4>{i18n.t("emergencyRequest")}</h4>
+        <h5>{i18n.t("managementOfEmer")}</h5>
         <div>
           <p>
-            Lörem ipsum slöjböter spefåvis inte proll stuprörspolitik, oaktat
-            kontrasat nonade. att apiniras. Vanat bektig.oaktat kontrasat
-            nonade. att apiniras. Vanat bektig.oaktat kontrasat nonade. att
-            apiniras. Vanat bektig. Lörem ipsum slöjböter spefåvis inte proll
-            stuprörspolitik, oaktat kontrasat nonade. att apiniras. Vanat
-            bektig.oaktat kontrasat nonade. att apiniras. Vanat bektig.oaktat
-            kontrasat nonade. att apiniras. Vanat bektig.
+          {i18n.t("imagineThis")}
           </p>
           <p>
-            Lörem ipsum slöjböter spefåvis inte proll stuprörspolitik, oaktat
-            kontrasat nonade. att apiniras. Vanat bektig.oaktat kontrasat
-            nonade. att apiniras. Lörem ipsum slöjböter spefåvis inte proll
-            stuprörspolitik, oaktat kontrasat nonade. att apiniras.
+          {i18n.t("noChildDeserves")}
           </p>
         </div>
         <div className={styles.list}>
@@ -43,7 +36,7 @@ const Service3: React.FC = () => {
         <div className={styles.button}>
           <Button
             type={ButtonType.SEC}
-            text="Contact Us"
+            text={i18n.t("contactUs")}
             icon={<ChevronIcon className={styles.buttonIcon} />}
             onClick={() => router.push("/contact-us")}
           />

@@ -6,33 +6,26 @@ import ChevronIcon from "@/components/Icons/ChevronIcon";
 import List from "@/components/List/List.component";
 import { Assets } from "@/static/assets/assets";
 import { useRouter } from "next/router";
+import i18n from "@/redux/i18n";
 
 const Service1: React.FC = () => {
   const router = useRouter()
   const list: { value: string; label: string }[] = [
-    { value: "one", label: "Symptom checker" },
-    { value: "two", label: "Health risk assessment" },
-    // { value: "two", label: "Chronic condition monitoring" },
+    { value: "one", label: i18n.t("generalSurgery") },
+    { value: "two", label: i18n.t("viceralSurgery") },
+    { value: "two", label: i18n.t("urologicalPlevicSurgery") },
   ];
   return (
     <section id="service1" className={`${styles.container} bg-primary-100 flex-col-reverse lg:flex-row`}>
       <div className={styles.container1}>
-        <h4>Service 1</h4>
+        <h4>{i18n.t("surgicalProcedures")}</h4>
+        <h5>{i18n.t("consultationsAnd")}</h5>
         <div>
           <p>
-            Lörem ipsum slöjböter spefåvis inte proll stuprörspolitik, oaktat
-            kontrasat nonade. att apiniras. Vanat bektig.oaktat kontrasat
-            nonade. att apiniras. Vanat bektig.oaktat kontrasat nonade. att
-            apiniras. Vanat bektig. Lörem ipsum slöjböter spefåvis inte proll
-            stuprörspolitik, oaktat kontrasat nonade. att apiniras. Vanat
-            bektig.oaktat kontrasat nonade. att apiniras. Vanat bektig.oaktat
-            kontrasat nonade. att apiniras. Vanat bektig.
+          {i18n.t("pediatricSurgeryIs")}
           </p>
           <p>
-            Lörem ipsum slöjböter spefåvis inte proll stuprörspolitik, oaktat
-            kontrasat nonade. att apiniras. Vanat bektig.oaktat kontrasat
-            nonade. att apiniras. Lörem ipsum slöjböter spefåvis inte proll
-            stuprörspolitik, oaktat kontrasat nonade. att apiniras.
+          {i18n.t("ifYouChild")}
           </p>
         </div>
         <div className={styles.list}>
@@ -43,7 +36,7 @@ const Service1: React.FC = () => {
         <div className={styles.button}>
           <Button
             type={ButtonType.SEC}
-            text="Contact Us"
+            text={i18n.t("contactUs")}
             icon={<ChevronIcon className={styles.buttonIcon} />}
             onClick={() => router.push("/contact-us")}
           />
