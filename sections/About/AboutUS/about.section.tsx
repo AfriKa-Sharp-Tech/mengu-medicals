@@ -19,14 +19,12 @@ const About: React.FC = () => {
   ];
 
   const leftList: { value: string; label: string }[] = [
-    { value: "one", label: i18n.t("mentoring") },
-    { value: "two", label: i18n.t("emergency") },
-    { value: "three", label: i18n.t("insurances") },
-    { value: "four", label: `${i18n.t("pathology")} 1` },
-    { value: "five", label: `${i18n.t("pathology")} 2` },
-    { value: "six", label: `${i18n.t("pathology")} 3` },
-    { value: "seven", label: `${i18n.t("pathology")} 4` },
-    { value: "eight", label: i18n.t("privacyPolicy") },
+    { value: "one", label: i18n.t("respiratoryDistress") },
+    { value: "two", label: i18n.t("childWithaSerious") },
+    { value: "three", label: i18n.t("GERD") },
+    { value: "four", label: `${i18n.t("solidTurmors")}` },
+    { value: "five", label: `${i18n.t("emmergency")}` },
+    { value: "six", label: `${i18n.t("insurances")} 3` },
   ];
   return (
     <section id="about-us" className={styles.container}>
@@ -47,11 +45,9 @@ const About: React.FC = () => {
             <img src={Assets.social} alt="TESTImage" />
             <h6>{i18n.t("newsletterReg")}</h6>
             <p>
-              Bleiben Sie mit unseren sorgfältig kuratierten und neuesten
-              Nachrichten auf dem Laufenden, um den Ruhestand einfacher zu
-              gestalten.
+            {i18n.t("signUpFor")}
             </p>
-            <h5>Geben Sie Ihren Namen und E-Mail Adresse ein.</h5>
+            <h5>{i18n.t("enterYourName")}</h5>
             <div className={styles.leftSideNewsButton}>
               <Input
                 placeholder={i18n.t("nameSmith")}
@@ -73,8 +69,8 @@ const About: React.FC = () => {
           </div>
         </div>
         <div className={styles.containerRight}>
-          <h5>{i18n.t("aboutUs")}</h5>
-          <h6>{i18n.t("predictiveSurgeon")}</h6>
+          <h6>{i18n.t("aboutUs")}</h6>
+          <h5>{i18n.t("predictiveSurgeon")}</h5>
           <p className={styles.p1}>{i18n.t("imagineAPlaceWhere")}</p>
           <p className={[styles.p1, "mt-6"].join(" ")}>
             {i18n.t("ourExpertiseExtendsFar")}
@@ -82,7 +78,7 @@ const About: React.FC = () => {
           <div className={styles.firstImageContainer}>
             <div className={styles.firstContainer}>
               <h6>{i18n.t("predictiveHealth")}</h6>
-              <p>{i18n.t("predictiveHealth")}</p>
+              <p>{i18n.t("goodHealth")}</p>
             </div>
             <div className={styles.firstImage}>
               <img src={Assets.happy} alt="TestImage" />

@@ -61,3 +61,11 @@
 .menguIcon {
     @apply h-full w-full object-center object-cover;
 }
+
+.listStyles {
+    @apply list-disc pl-4;
+}
+
+.listStyles > li {
+    @apply text-white text-base font-normal;
+}

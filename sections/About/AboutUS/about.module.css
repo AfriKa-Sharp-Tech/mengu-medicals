@@ -95,14 +95,14 @@
     @apply lg:px-14 lg:py-8 lg:w-[60.9%];
 }
 
-.containerRight > h5 {
+.containerRight > h6 {
     @apply text-secondary-400 text-[26px] font-bold;
     @apply md:text-[26px];
     @apply lg:text-[42px];
 }
 
-.containerRight > h6 {
-    @apply text-primary-700 text-[26px] font-normal;
+.containerRight > h5 {
+    @apply text-primary-700 text-[26px] font-bold;
     @apply lg:text-[26px];
 }
 

@@ -16,7 +16,12 @@ const Advertisment: React.FC = () => {
         <div className={styles.advertLeft}>
           <h5>{i18n.t("advertisement")}</h5>
           <h6>{i18n.t("formwandlerFitness")}</h6>
-          <p>{i18n.t("advertisementDescription")}</p>
+          <ul className={styles.listStyles}>
+            <li>{i18n.t("viceralDigestive")}</li>
+            <li>{i18n.t("personalizedChildCard")}</li>
+            <li>{i18n.t("cuttinEdge")}</li>
+            <li>{i18n.t("partOf")}</li>
+          </ul>
           <div className={styles.button}>
             <Button
               text={i18n.t("contactUs")}
